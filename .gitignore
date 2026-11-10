@@ -1,0 +1,57 @@
+# Secrets & local env (never commit real keys)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets/
+.secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Local DB / runtime storage (keep placeholder only)
+storage/*
+!storage/.gitkeep
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Logs & reports
+*.log
+logs/
+reports/
+eval_reports/
+storage/eval50/
+storage/demo_*/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Docker / local overrides
+docker-compose.override.yml

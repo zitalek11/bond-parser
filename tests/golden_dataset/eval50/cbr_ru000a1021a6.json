@@ -1,0 +1,133 @@
+{
+  "id": "cbr_ru000a1021a6",
+  "title": "ЦБ: РОССИУМ2P2",
+  "source": "cbr",
+  "tags": [
+    "cbr",
+    "floater"
+  ],
+  "input_markdown": "БАНК РОССИИ\nСведения из реестра эмиссионных ценных бумаг\n\nПолное наименование эмитента: ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОНЦЕРН \"РОССИУМ\"\nИНН эмитента: 5032152372\nГосударственный регистрационный номер выпуска: 4B02-02-36479-R-002P\nISIN: RU000A1021A6\nВалюта номинала ценной бумаги: российский рубль (RUB)\nНоминальная стоимость одной ценной бумаги: 1 000,00 руб.\nКоличество ценных бумаг в выпуске: 20000000 шт.\nДата начала размещения: 17.08.2020\nДата погашения: 05.08.2030\n\nПорядок определения процентной ставки:\nИндикатор: KEY_RATE_CBR.\nСпред составляет 1.75 процента годовых.\nФормула: Ключевая ставка.\nКупонный доход является плавающим (флоатер).\n\n| № купонного периода | Дата начала | Дата окончания (выплаты) | Ставка, % годовых | Размер выплаты, руб. |\n| --- | --- | --- | --- | --- |\n| 1 | 17.08.2020 | 15.02.2021 | 6.0 | 29.92 |\n| 2 | 15.02.2021 | 16.08.2021 | 6.0 | 29.92 |\n| 3 | 16.08.2021 | 14.02.2022 | 8.25 | 41.14 |\n| 4 | 14.02.2022 | 15.08.2022 | 10.25 | 51.11 |\n| 5 | 15.08.2022 | 13.02.2023 | 9.75 | 48.62 |\n| 6 | 13.02.2023 | 14.08.2023 | 9.25 | 46.12 |\n| 7 | 14.08.2023 | 12.02.2024 | 10.25 | 51.11 |\n| 8 | 12.02.2024 | 12.08.2024 | 17.75 | 88.51 |\n| 9 | 12.08.2024 | 10.02.2025 | 19.75 | 98.48 |\n| 10 | 10.02.2025 | 11.08.2025 | 22.75 | 113.44 |\n| 11 | 11.08.2025 | 09.02.2026 | 19.75 | 98.48 |\n| 12 | 09.02.2026 | 10.08.2026 | 17.75 | 88.51 |",
+  "expected": {
+    "isin": "RU000A1021A6",
+    "reg_number": "4B02-02-36479-R-002P",
+    "issuer_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КОНЦЕРН \"РОССИУМ\"",
+    "issuer_inn": "5032152372",
+    "nominal_value": 1000.0,
+    "currency": "RUB",
+    "issue_volume": 20000000,
+    "placement_start_date": "2020-08-17",
+    "maturity_date": "2030-08-05",
+    "coupon_type": "FLOATER",
+    "floater_formula": {
+      "benchmark": "KEY_RATE_CBR",
+      "spread_percent": 1.75,
+      "observation_shift_days": 5,
+      "averaging_type": "POINT_IN_TIME",
+      "raw_formula_text": "Ключевая ставка"
+    },
+    "coupons": [
+      {
+        "coupon_number": 1,
+        "start_date": "2020-08-17",
+        "end_date": "2021-02-15",
+        "rate_percent": 6.0,
+        "payment_amount": 29.92
+      },
+      {
+        "coupon_number": 2,
+        "start_date": "2021-02-15",
+        "end_date": "2021-08-16",
+        "rate_percent": 6.0,
+        "payment_amount": 29.92
+      },
+      {
+        "coupon_number": 3,
+        "start_date": "2021-08-16",
+        "end_date": "2022-02-14",
+        "rate_percent": 8.25,
+        "payment_amount": 41.14
+      },
+      {
+        "coupon_number": 4,
+        "start_date": "2022-02-14",
+        "end_date": "2022-08-15",
+        "rate_percent": 10.25,
+        "payment_amount": 51.11
+      },
+      {
+        "coupon_number": 5,
+        "start_date": "2022-08-15",
+        "end_date": "2023-02-13",
+        "rate_percent": 9.75,
+        "payment_amount": 48.62
+      },
+      {
+        "coupon_number": 6,
+        "start_date": "2023-02-13",
+        "end_date": "2023-08-14",
+        "rate_percent": 9.25,
+        "payment_amount": 46.12
+      },
+      {
+        "coupon_number": 7,
+        "start_date": "2023-08-14",
+        "end_date": "2024-02-12",
+        "rate_percent": 10.25,
+        "payment_amount": 51.11
+      },
+      {
+        "coupon_number": 8,
+        "start_date": "2024-02-12",
+        "end_date": "2024-08-12",
+        "rate_percent": 17.75,
+        "payment_amount": 88.51
+      },
+      {
+        "coupon_number": 9,
+        "start_date": "2024-08-12",
+        "end_date": "2025-02-10",
+        "rate_percent": 19.75,
+        "payment_amount": 98.48
+      },
+      {
+        "coupon_number": 10,
+        "start_date": "2025-02-10",
+        "end_date": "2025-08-11",
+        "rate_percent": 22.75,
+        "payment_amount": 113.44
+      },
+      {
+        "coupon_number": 11,
+        "start_date": "2025-08-11",
+        "end_date": "2026-02-09",
+        "rate_percent": 19.75,
+        "payment_amount": 98.48
+      },
+      {
+        "coupon_number": 12,
+        "start_date": "2026-02-09",
+        "end_date": "2026-08-10",
+        "rate_percent": 17.75,
+        "payment_amount": 88.51
+      }
+    ],
+    "amortization": [],
+    "quotes": {
+      "reg_number": "Государственный регистрационный номер выпуска: 4B02-02-36479-R-002P",
+      "issuer_inn": "ИНН: 5032152372",
+      "nominal_value": "Номинальная стоимость: 1000.0"
+    }
+  },
+  "critical_fields": [
+    "reg_number",
+    "isin",
+    "issuer_inn",
+    "nominal_value",
+    "currency",
+    "maturity_date",
+    "coupon_type",
+    "coupons_count",
+    "benchmark",
+    "spread_percent"
+  ]
+}

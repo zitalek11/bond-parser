@@ -1,0 +1,247 @@
+{
+  "id": "interfax_ru000a107480",
+  "title": "ЦРКИ: ЛТрейд1P10",
+  "source": "interfax_crki",
+  "tags": [
+    "interfax_crki",
+    "fixed"
+  ],
+  "input_markdown": "Сообщение о существенном факте\nИнтерфакс — Центр раскрытия корпоративной информации\n\nЭмитент: ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛИЗИНГ-ТРЕЙД\"\nИНН: 1655096633\nВид ценных бумаг: биржевые облигации\nГосударственный регистрационный номер выпуска: 4B02-10-00506-R-001P\nISIN код: RU000A107480\n\n## Сведения о размещаемых ценных бумагах\nНоминальная стоимость одной биржевой облигации составляет 958 (958,40) рублей.\nВалюта номинала: российский рубль (RUB).\nКоличество ценных бумаг выпуска: 200000 (штук).\nДата начала размещения: 23.10.2023\nДата погашения: 26.09.2028\n\n## Срок и порядок выплаты купонного дохода\nКупонный доход является фиксированным.\nСтавка купона составляет 20,00 процента годовых.\n\n| № купонного периода | Дата начала | Дата окончания (выплаты) | Ставка, % годовых | Размер выплаты, руб. |\n| --- | --- | --- | --- | --- |\n| 1 | 23.10.2023 | 22.11.2023 | 20.0 | 16.44 |\n| 2 | 22.11.2023 | 22.12.2023 | 20.0 | 16.44 |\n| 3 | 22.12.2023 | 21.01.2024 | 20.0 | 16.44 |\n| 4 | 21.01.2024 | 20.02.2024 | 20.0 | 16.44 |\n| 5 | 20.02.2024 | 21.03.2024 | 20.0 | 16.44 |\n| 6 | 21.03.2024 | 20.04.2024 | 20.0 | 16.44 |\n| 7 | 20.04.2024 | 20.05.2024 | 20.0 | 16.44 |\n| 8 | 20.05.2024 | 19.06.2024 | 20.0 | 16.44 |\n| 9 | 19.06.2024 | 19.07.2024 | 20.0 | 16.44 |\n| 10 | 19.07.2024 | 18.08.2024 | 20.0 | 16.44 |\n| 11 | 18.08.2024 | 17.09.2024 | 20.0 | 16.44 |\n| 12 | 17.09.2024 | 17.10.2024 | 20.0 | 16.44 |\n\n## Порядок и условия погашения\nПогашение номинальной стоимости осуществляется частично (амортизация):\n\n| Дата | Процент погашения от номинала | Остаток номинала, % |\n| --- | --- | --- |\n| 06.11.2026 | 4.16 | 95.84 |\n| 06.12.2026 | 4.16 | 91.68 |\n| 05.01.2027 | 4.16 | 87.52 |\n| 04.02.2027 | 4.16 | 83.36 |\n| 06.03.2027 | 4.16 | 79.2 |\n| 05.04.2027 | 4.16 | 75.04 |\n| 05.05.2027 | 4.16 | 70.88 |\n| 04.06.2027 | 4.16 | 66.72 |\n| 04.07.2027 | 4.16 | 62.56 |\n| 03.08.2027 | 4.16 | 58.4 |\n| 02.09.2027 | 4.16 | 54.24 |\n| 02.10.2027 | 4.16 | 50.08 |\n| 01.11.2027 | 4.16 | 45.92 |\n| 01.12.2027 | 4.16 | 41.76 |\n| 31.12.2027 | 4.16 | 37.6 |\n| 30.01.2028 | 4.16 | 33.44 |\n| 29.02.2028 | 4.16 | 29.28 |\n| 30.03.2028 | 4.16 | 25.12 |\n| 29.04.2028 | 4.16 | 20.96 |\n| 29.05.2028 | 4.16 | 16.8 |\n| 28.06.2028 | 4.16 | 12.64 |\n| 28.07.2028 | 4.16 | 8.48 |\n| 27.08.2028 | 4.16 | 4.32 |\n| 26.09.2028 | 4.32 | 0.0 |\n\nИсточник раскрытия: Интерфакс-ЦРКИ (e-disclosure.ru).\nТекст собран по рыночным атрибутам выпуска (сайт ЦРКИ требует CAPTCHA).",
+  "expected": {
+    "isin": "RU000A107480",
+    "reg_number": "4B02-10-00506-R-001P",
+    "issuer_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛИЗИНГ-ТРЕЙД\"",
+    "issuer_inn": "1655096633",
+    "nominal_value": 958.4,
+    "currency": "RUB",
+    "issue_volume": 200000,
+    "placement_start_date": "2023-10-23",
+    "maturity_date": "2028-09-26",
+    "coupon_type": "FIXED",
+    "floater_formula": null,
+    "coupons": [
+      {
+        "coupon_number": 1,
+        "start_date": "2023-10-23",
+        "end_date": "2023-11-22",
+        "rate_percent": 20.0,
+        "payment_amount": 16.44
+      },
+      {
+        "coupon_number": 2,
+        "start_date": "2023-11-22",
+        "end_date": "2023-12-22",
+        "rate_percent": 20.0,
+        "payment_amount": 16.44
+      },
+      {
+        "coupon_number": 3,
+        "start_date": "2023-12-22",
+        "end_date": "2024-01-21",
+        "rate_percent": 20.0,
+        "payment_amount": 16.44
+      },
+      {
+        "coupon_number": 4,
+        "start_date": "2024-01-21",
+        "end_date": "2024-02-20",
+        "rate_percent": 20.0,
+        "payment_amount": 16.44
+      },
+      {
+        "coupon_number": 5,
+        "start_date": "2024-02-20",
+        "end_date": "2024-03-21",
+        "rate_percent": 20.0,
+        "payment_amount": 16.44
+      },
+      {
+        "coupon_number": 6,
+        "start_date": "2024-03-21",
+        "end_date": "2024-04-20",
+        "rate_percent": 20.0,
+        "payment_amount": 16.44
+      },
+      {
+        "coupon_number": 7,
+        "start_date": "2024-04-20",
+        "end_date": "2024-05-20",
+        "rate_percent": 20.0,
+        "payment_amount": 16.44
+      },
+      {
+        "coupon_number": 8,
+        "start_date": "2024-05-20",
+        "end_date": "2024-06-19",
+        "rate_percent": 20.0,
+        "payment_amount": 16.44
+      },
+      {
+        "coupon_number": 9,
+        "start_date": "2024-06-19",
+        "end_date": "2024-07-19",
+        "rate_percent": 20.0,
+        "payment_amount": 16.44
+      },
+      {
+        "coupon_number": 10,
+        "start_date": "2024-07-19",
+        "end_date": "2024-08-18",
+        "rate_percent": 20.0,
+        "payment_amount": 16.44
+      },
+      {
+        "coupon_number": 11,
+        "start_date": "2024-08-18",
+        "end_date": "2024-09-17",
+        "rate_percent": 20.0,
+        "payment_amount": 16.44
+      },
+      {
+        "coupon_number": 12,
+        "start_date": "2024-09-17",
+        "end_date": "2024-10-17",
+        "rate_percent": 20.0,
+        "payment_amount": 16.44
+      }
+    ],
+    "amortization": [
+      {
+        "payment_date": "2026-11-06",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 95.84
+      },
+      {
+        "payment_date": "2026-12-06",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 91.68
+      },
+      {
+        "payment_date": "2027-01-05",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 87.52
+      },
+      {
+        "payment_date": "2027-02-04",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 83.36
+      },
+      {
+        "payment_date": "2027-03-06",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 79.2
+      },
+      {
+        "payment_date": "2027-04-05",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 75.04
+      },
+      {
+        "payment_date": "2027-05-05",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 70.88
+      },
+      {
+        "payment_date": "2027-06-04",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 66.72
+      },
+      {
+        "payment_date": "2027-07-04",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 62.56
+      },
+      {
+        "payment_date": "2027-08-03",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 58.4
+      },
+      {
+        "payment_date": "2027-09-02",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 54.24
+      },
+      {
+        "payment_date": "2027-10-02",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 50.08
+      },
+      {
+        "payment_date": "2027-11-01",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 45.92
+      },
+      {
+        "payment_date": "2027-12-01",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 41.76
+      },
+      {
+        "payment_date": "2027-12-31",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 37.6
+      },
+      {
+        "payment_date": "2028-01-30",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 33.44
+      },
+      {
+        "payment_date": "2028-02-29",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 29.28
+      },
+      {
+        "payment_date": "2028-03-30",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 25.12
+      },
+      {
+        "payment_date": "2028-04-29",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 20.96
+      },
+      {
+        "payment_date": "2028-05-29",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 16.8
+      },
+      {
+        "payment_date": "2028-06-28",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 12.64
+      },
+      {
+        "payment_date": "2028-07-28",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 8.48
+      },
+      {
+        "payment_date": "2028-08-27",
+        "amortization_percent": 4.16,
+        "residual_nominal_percent": 4.32
+      },
+      {
+        "payment_date": "2028-09-26",
+        "amortization_percent": 4.32,
+        "residual_nominal_percent": 0.0
+      }
+    ],
+    "quotes": {
+      "reg_number": "Государственный регистрационный номер выпуска: 4B02-10-00506-R-001P",
+      "issuer_inn": "ИНН: 1655096633",
+      "nominal_value": "Номинальная стоимость: 958.4"
+    }
+  },
+  "critical_fields": [
+    "reg_number",
+    "isin",
+    "issuer_inn",
+    "nominal_value",
+    "currency",
+    "maturity_date",
+    "coupon_type",
+    "coupons_count",
+    "amortization_sum"
+  ]
+}

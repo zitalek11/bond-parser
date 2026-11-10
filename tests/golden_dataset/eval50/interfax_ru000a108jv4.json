@@ -1,0 +1,133 @@
+{
+  "id": "interfax_ru000a108jv4",
+  "title": "ЦРКИ: ГазпКап3P2",
+  "source": "interfax_crki",
+  "tags": [
+    "interfax_crki",
+    "floater"
+  ],
+  "input_markdown": "Сообщение о существенном факте\nИнтерфакс — Центр раскрытия корпоративной информации\n\nЭмитент: ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАЗПРОМ КАПИТАЛ\"\nИНН: 7726588547\nВид ценных бумаг: биржевые облигации\nГосударственный регистрационный номер выпуска: 4B02-02-36400-R-003P\nISIN код: RU000A108JV4\n\n## Сведения о размещаемых ценных бумагах\nНоминальная стоимость одной биржевой облигации составляет 1000 (1 000,00) рублей.\nВалюта номинала: российский рубль (RUB).\nКоличество ценных бумаг выпуска: 40000000 (штук).\nДата начала размещения: 28.05.2024\nДата погашения: 07.05.2028\n\n## Срок и порядок выплаты купонного дохода\nКупонный доход является плавающим.\nБазовый индикатор: KEY_RATE_CBR (ключевая ставка Банка России).\nСпред: 1.25% годовых.\nЦитата формулы: «Ключевая ставка».\nЛаг наблюдения: 5 дней.\n\n| № купонного периода | Дата начала | Дата окончания (выплаты) | Ставка, % годовых | Размер выплаты, руб. |\n| --- | --- | --- | --- | --- |\n| 1 | 28.05.2024 | 27.06.2024 |  | 14.18 |\n| 2 | 27.06.2024 | 27.07.2024 |  | 14.18 |\n| 3 | 27.07.2024 | 26.08.2024 |  | 15.38 |\n| 4 | 26.08.2024 | 25.09.2024 |  | 15.9 |\n| 5 | 25.09.2024 | 25.10.2024 |  | 16.64 |\n| 6 | 25.10.2024 | 24.11.2024 |  | 17.79 |\n| 7 | 24.11.2024 | 24.12.2024 |  | 18.29 |\n| 8 | 24.12.2024 | 23.01.2025 |  | 18.29 |\n| 9 | 23.01.2025 | 22.02.2025 |  | 18.29 |\n| 10 | 22.02.2025 | 24.03.2025 |  | 18.29 |\n| 11 | 24.03.2025 | 23.04.2025 |  | 18.29 |\n| 12 | 23.04.2025 | 23.05.2025 |  | 18.29 |\n\nИсточник раскрытия: Интерфакс-ЦРКИ (e-disclosure.ru).\nТекст собран по рыночным атрибутам выпуска (сайт ЦРКИ требует CAPTCHA).",
+  "expected": {
+    "isin": "RU000A108JV4",
+    "reg_number": "4B02-02-36400-R-003P",
+    "issuer_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАЗПРОМ КАПИТАЛ\"",
+    "issuer_inn": "7726588547",
+    "nominal_value": 1000.0,
+    "currency": "RUB",
+    "issue_volume": 40000000,
+    "placement_start_date": "2024-05-28",
+    "maturity_date": "2028-05-07",
+    "coupon_type": "FLOATER",
+    "floater_formula": {
+      "benchmark": "KEY_RATE_CBR",
+      "spread_percent": 1.25,
+      "observation_shift_days": 5,
+      "averaging_type": "POINT_IN_TIME",
+      "raw_formula_text": "Ключевая ставка"
+    },
+    "coupons": [
+      {
+        "coupon_number": 1,
+        "start_date": "2024-05-28",
+        "end_date": "2024-06-27",
+        "rate_percent": null,
+        "payment_amount": 14.18
+      },
+      {
+        "coupon_number": 2,
+        "start_date": "2024-06-27",
+        "end_date": "2024-07-27",
+        "rate_percent": null,
+        "payment_amount": 14.18
+      },
+      {
+        "coupon_number": 3,
+        "start_date": "2024-07-27",
+        "end_date": "2024-08-26",
+        "rate_percent": null,
+        "payment_amount": 15.38
+      },
+      {
+        "coupon_number": 4,
+        "start_date": "2024-08-26",
+        "end_date": "2024-09-25",
+        "rate_percent": null,
+        "payment_amount": 15.9
+      },
+      {
+        "coupon_number": 5,
+        "start_date": "2024-09-25",
+        "end_date": "2024-10-25",
+        "rate_percent": null,
+        "payment_amount": 16.64
+      },
+      {
+        "coupon_number": 6,
+        "start_date": "2024-10-25",
+        "end_date": "2024-11-24",
+        "rate_percent": null,
+        "payment_amount": 17.79
+      },
+      {
+        "coupon_number": 7,
+        "start_date": "2024-11-24",
+        "end_date": "2024-12-24",
+        "rate_percent": null,
+        "payment_amount": 18.29
+      },
+      {
+        "coupon_number": 8,
+        "start_date": "2024-12-24",
+        "end_date": "2025-01-23",
+        "rate_percent": null,
+        "payment_amount": 18.29
+      },
+      {
+        "coupon_number": 9,
+        "start_date": "2025-01-23",
+        "end_date": "2025-02-22",
+        "rate_percent": null,
+        "payment_amount": 18.29
+      },
+      {
+        "coupon_number": 10,
+        "start_date": "2025-02-22",
+        "end_date": "2025-03-24",
+        "rate_percent": null,
+        "payment_amount": 18.29
+      },
+      {
+        "coupon_number": 11,
+        "start_date": "2025-03-24",
+        "end_date": "2025-04-23",
+        "rate_percent": null,
+        "payment_amount": 18.29
+      },
+      {
+        "coupon_number": 12,
+        "start_date": "2025-04-23",
+        "end_date": "2025-05-23",
+        "rate_percent": null,
+        "payment_amount": 18.29
+      }
+    ],
+    "amortization": [],
+    "quotes": {
+      "reg_number": "Государственный регистрационный номер выпуска: 4B02-02-36400-R-003P",
+      "issuer_inn": "ИНН: 7726588547",
+      "nominal_value": "Номинальная стоимость: 1000.0"
+    }
+  },
+  "critical_fields": [
+    "reg_number",
+    "isin",
+    "issuer_inn",
+    "nominal_value",
+    "currency",
+    "maturity_date",
+    "coupon_type",
+    "coupons_count",
+    "benchmark",
+    "spread_percent"
+  ]
+}

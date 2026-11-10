@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Очередь проверки — {{ app_name }}{% endblock %}
+{% block content %}
+<div class="mb-6">
+  <h1 class="text-2xl font-semibold tracking-tight">Очередь проверки</h1>
+  <p class="mt-1 text-sm text-slate-600">Документы со статусом «На проверке» — нуждается в подтверждении оператора</p>
+</div>
+
+<div class="rounded-xl border border-line bg-white">
+  <div class="overflow-x-auto">
+    <table class="min-w-full text-left text-sm">
+      <thead class="bg-panel text-xs uppercase tracking-wide text-slate-500">
+        <tr>
+          <th class="px-4 py-3 font-medium">№</th>
+          <th class="px-4 py-3 font-medium">Документ</th>
+          <th class="px-4 py-3 font-medium">Источник</th>
+          <th class="px-4 py-3 font-medium">Причины</th>
+          <th class="px-4 py-3 font-medium">Создан</th>
+          <th class="px-4 py-3 font-medium"></th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-line">
+        {% for t in tasks %}
+        <tr class="align-top hover:bg-slate-50">
+          <td class="px-4 py-3 font-mono text-xs">#{{ t.id }}</td>
+          <td class="px-4 py-3">
+            <div class="font-medium">{{ t.title or t.original_filename or "Без названия" }}</div>
+            {% if t.llm_output and t.llm_output.get('reg_number') %}
+            <div class="mt-0.5 font-mono text-xs text-slate-500">{{ t.llm_output.get('reg_number') }}</div>
+            {% endif %}
+          </td>
+          <td class="px-4 py-3">{{ t.source | source_ru }}</td>
+          <td class="px-4 py-3">
+            <ul class="space-y-1">
+              {% for err in (t.validation_errors or []) if err.get('severity') != 'warning' %}
+              <li class="text-xs text-danger">
+                <span class="font-mono">{{ err.get('code') }}</span>
+                — {{ err.get('message') }}
+              </li>
+              {% else %}
+              <li class="text-xs text-slate-400">—</li>
+              {% endfor %}
+            </ul>
+          </td>
+          <td class="px-4 py-3 text-xs text-slate-500">{{ t.created_at }}</td>
+          <td class="px-4 py-3 text-right">
+            <a href="/review/{{ t.id }}" class="rounded-md bg-ink px-3 py-1.5 text-xs font-medium text-white hover:bg-slate-800">Открыть</a>
+          </td>
+        </tr>
+        {% else %}
+        <tr>
+          <td colspan="6" class="px-4 py-10 text-center text-slate-500">
+            Очередь пуста. Все документы прошли автоматическую проверку качества или ещё не поступали.
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

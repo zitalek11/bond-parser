@@ -1,0 +1,4 @@
+# Optional high-quality layout/OCR backend (pulls torch & models, ~2+ GB).
+# Install on top of requirements.txt and set EXTRACTOR_BACKEND=docling (or auto).
+-r requirements.txt
+docling>=2.5

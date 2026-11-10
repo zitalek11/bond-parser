@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}{{ app_name }}{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#0f172a",
+            panel: "#f8fafc",
+            line: "#e2e8f0",
+            accent: "#0f766e",
+            danger: "#b91c1c",
+            warn: "#b45309",
+          },
+          fontFamily: {
+            sans: ["IBM Plex Sans", "Segoe UI", "sans-serif"],
+            mono: ["IBM Plex Mono", "ui-monospace", "monospace"],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: "IBM Plex Sans", sans-serif; }
+    .field-error { border-color: #b91c1c !important; background: #fef2f2; }
+    .htmx-indicator { display: none; }
+    .htmx-request .htmx-indicator, .htmx-request.htmx-indicator { display: inline-flex; }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-100 text-ink">
+  <header class="border-b border-line bg-white">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
+      <a href="/" class="text-lg font-semibold tracking-tight text-ink">{{ app_name }}</a>
+      <nav class="flex items-center gap-1 text-sm">
+        <a href="/" class="rounded-md px-3 py-2 hover:bg-slate-100 {% if request.url.path == '/' %}bg-slate-100 font-medium{% endif %}">Главная</a>
+        <a href="/queue" class="rounded-md px-3 py-2 hover:bg-slate-100 {% if request.url.path.startswith('/queue') or request.url.path.startswith('/review') %}bg-slate-100 font-medium{% endif %}">Очередь проверки</a>
+        <a href="/docs" class="rounded-md px-3 py-2 text-slate-500 hover:bg-slate-100" target="_blank" rel="noreferrer">Документация API</a>
+      </nav>
+    </div>
+  </header>
+  <main class="mx-auto max-w-7xl px-4 py-6">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

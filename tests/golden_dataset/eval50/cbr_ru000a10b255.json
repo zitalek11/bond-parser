@@ -1,0 +1,312 @@
+{
+  "id": "cbr_ru000a10b255",
+  "title": "ЦБ: ММЗ001P-02",
+  "source": "cbr",
+  "tags": [
+    "cbr",
+    "fixed"
+  ],
+  "input_markdown": "БАНК РОССИИ\nСведения из реестра эмиссионных ценных бумаг\n\nПолное наименование эмитента: ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МИХАЙЛОВСКИЙ МОЛОЧНЫЙ ЗАВОД\"\nИНН эмитента: 7801271157\nГосударственный регистрационный номер выпуска: 4B02-02-00799-R-001P\nISIN: RU000A10B255\nВалюта номинала ценной бумаги: российский рубль (RUB)\nНоминальная стоимость одной ценной бумаги: 775,00 руб.\nКоличество ценных бумаг в выпуске: 85000 шт.\nДата начала размещения: 12.03.2025\nДата погашения: 19.02.2029\n\nКупонный доход является фиксированным.\nСтавка купона: 27,00 процента годовых.\n\n| № купонного периода | Дата начала | Дата окончания (выплаты) | Ставка, % годовых | Размер выплаты, руб. |\n| --- | --- | --- | --- | --- |\n| 1 | 12.03.2025 | 11.04.2025 | 27.0 | 22.19 |\n| 2 | 11.04.2025 | 11.05.2025 | 27.0 | 22.19 |\n| 3 | 11.05.2025 | 10.06.2025 | 27.0 | 22.19 |\n| 4 | 10.06.2025 | 10.07.2025 | 27.0 | 22.19 |\n| 5 | 10.07.2025 | 09.08.2025 | 27.0 | 22.19 |\n| 6 | 09.08.2025 | 08.09.2025 | 27.0 | 22.19 |\n| 7 | 08.09.2025 | 08.10.2025 | 27.0 | 22.19 |\n| 8 | 08.10.2025 | 07.11.2025 | 27.0 | 22.19 |\n| 9 | 07.11.2025 | 07.12.2025 | 27.0 | 22.19 |\n| 10 | 07.12.2025 | 06.01.2026 | 27.0 | 22.19 |\n| 11 | 06.01.2026 | 05.02.2026 | 27.0 | 22.19 |\n| 12 | 05.02.2026 | 07.03.2026 | 27.0 | 22.19 |\n\n## Порядок и условия погашения\nПогашение номинальной стоимости осуществляется частично (амортизация):\n\n| Дата | Процент погашения от номинала | Остаток номинала, % |\n| --- | --- | --- |\n| 07.03.2026 | 3.0 | 97.0 |\n| 06.04.2026 | 3.0 | 94.0 |\n| 06.05.2026 | 3.0 | 91.0 |\n| 05.06.2026 | 3.0 | 88.0 |\n| 05.07.2026 | 1.5 | 86.5 |\n| 04.08.2026 | 1.5 | 85.0 |\n| 03.09.2026 | 1.5 | 83.5 |\n| 03.10.2026 | 3.0 | 80.5 |\n| 02.11.2026 | 3.0 | 77.5 |\n| 02.12.2026 | 3.0 | 74.5 |\n| 01.01.2027 | 3.0 | 71.5 |\n| 31.01.2027 | 3.0 | 68.5 |\n| 02.03.2027 | 3.0 | 65.5 |\n| 01.04.2027 | 3.0 | 62.5 |\n| 01.05.2027 | 3.0 | 59.5 |\n| 31.05.2027 | 3.0 | 56.5 |\n| 30.06.2027 | 1.5 | 55.0 |\n| 30.07.2027 | 1.5 | 53.5 |\n| 29.08.2027 | 1.5 | 52.0 |\n| 28.09.2027 | 3.0 | 49.0 |\n| 28.10.2027 | 3.0 | 46.0 |\n| 27.11.2027 | 3.0 | 43.0 |\n| 27.12.2027 | 3.0 | 40.0 |\n| 26.01.2028 | 3.0 | 37.0 |\n| 25.02.2028 | 3.0 | 34.0 |\n| 26.03.2028 | 3.0 | 31.0 |\n| 25.04.2028 | 3.0 | 28.0 |\n| 25.05.2028 | 3.0 | 25.0 |\n| 24.06.2028 | 3.0 | 22.0 |\n| 24.07.2028 | 1.5 | 20.5 |\n| 23.08.2028 | 1.5 | 19.0 |\n| 22.09.2028 | 1.5 | 17.5 |\n| 22.10.2028 | 3.0 | 14.5 |\n| 21.11.2028 | 3.0 | 11.5 |\n| 21.12.2028 | 3.0 | 8.5 |\n| 20.01.2029 | 3.0 | 5.5 |\n| 19.02.2029 | 5.5 | 0.0 |",
+  "expected": {
+    "isin": "RU000A10B255",
+    "reg_number": "4B02-02-00799-R-001P",
+    "issuer_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МИХАЙЛОВСКИЙ МОЛОЧНЫЙ ЗАВОД\"",
+    "issuer_inn": "7801271157",
+    "nominal_value": 775.0,
+    "currency": "RUB",
+    "issue_volume": 85000,
+    "placement_start_date": "2025-03-12",
+    "maturity_date": "2029-02-19",
+    "coupon_type": "FIXED",
+    "floater_formula": null,
+    "coupons": [
+      {
+        "coupon_number": 1,
+        "start_date": "2025-03-12",
+        "end_date": "2025-04-11",
+        "rate_percent": 27.0,
+        "payment_amount": 22.19
+      },
+      {
+        "coupon_number": 2,
+        "start_date": "2025-04-11",
+        "end_date": "2025-05-11",
+        "rate_percent": 27.0,
+        "payment_amount": 22.19
+      },
+      {
+        "coupon_number": 3,
+        "start_date": "2025-05-11",
+        "end_date": "2025-06-10",
+        "rate_percent": 27.0,
+        "payment_amount": 22.19
+      },
+      {
+        "coupon_number": 4,
+        "start_date": "2025-06-10",
+        "end_date": "2025-07-10",
+        "rate_percent": 27.0,
+        "payment_amount": 22.19
+      },
+      {
+        "coupon_number": 5,
+        "start_date": "2025-07-10",
+        "end_date": "2025-08-09",
+        "rate_percent": 27.0,
+        "payment_amount": 22.19
+      },
+      {
+        "coupon_number": 6,
+        "start_date": "2025-08-09",
+        "end_date": "2025-09-08",
+        "rate_percent": 27.0,
+        "payment_amount": 22.19
+      },
+      {
+        "coupon_number": 7,
+        "start_date": "2025-09-08",
+        "end_date": "2025-10-08",
+        "rate_percent": 27.0,
+        "payment_amount": 22.19
+      },
+      {
+        "coupon_number": 8,
+        "start_date": "2025-10-08",
+        "end_date": "2025-11-07",
+        "rate_percent": 27.0,
+        "payment_amount": 22.19
+      },
+      {
+        "coupon_number": 9,
+        "start_date": "2025-11-07",
+        "end_date": "2025-12-07",
+        "rate_percent": 27.0,
+        "payment_amount": 22.19
+      },
+      {
+        "coupon_number": 10,
+        "start_date": "2025-12-07",
+        "end_date": "2026-01-06",
+        "rate_percent": 27.0,
+        "payment_amount": 22.19
+      },
+      {
+        "coupon_number": 11,
+        "start_date": "2026-01-06",
+        "end_date": "2026-02-05",
+        "rate_percent": 27.0,
+        "payment_amount": 22.19
+      },
+      {
+        "coupon_number": 12,
+        "start_date": "2026-02-05",
+        "end_date": "2026-03-07",
+        "rate_percent": 27.0,
+        "payment_amount": 22.19
+      }
+    ],
+    "amortization": [
+      {
+        "payment_date": "2026-03-07",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 97.0
+      },
+      {
+        "payment_date": "2026-04-06",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 94.0
+      },
+      {
+        "payment_date": "2026-05-06",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 91.0
+      },
+      {
+        "payment_date": "2026-06-05",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 88.0
+      },
+      {
+        "payment_date": "2026-07-05",
+        "amortization_percent": 1.5,
+        "residual_nominal_percent": 86.5
+      },
+      {
+        "payment_date": "2026-08-04",
+        "amortization_percent": 1.5,
+        "residual_nominal_percent": 85.0
+      },
+      {
+        "payment_date": "2026-09-03",
+        "amortization_percent": 1.5,
+        "residual_nominal_percent": 83.5
+      },
+      {
+        "payment_date": "2026-10-03",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 80.5
+      },
+      {
+        "payment_date": "2026-11-02",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 77.5
+      },
+      {
+        "payment_date": "2026-12-02",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 74.5
+      },
+      {
+        "payment_date": "2027-01-01",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 71.5
+      },
+      {
+        "payment_date": "2027-01-31",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 68.5
+      },
+      {
+        "payment_date": "2027-03-02",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 65.5
+      },
+      {
+        "payment_date": "2027-04-01",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 62.5
+      },
+      {
+        "payment_date": "2027-05-01",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 59.5
+      },
+      {
+        "payment_date": "2027-05-31",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 56.5
+      },
+      {
+        "payment_date": "2027-06-30",
+        "amortization_percent": 1.5,
+        "residual_nominal_percent": 55.0
+      },
+      {
+        "payment_date": "2027-07-30",
+        "amortization_percent": 1.5,
+        "residual_nominal_percent": 53.5
+      },
+      {
+        "payment_date": "2027-08-29",
+        "amortization_percent": 1.5,
+        "residual_nominal_percent": 52.0
+      },
+      {
+        "payment_date": "2027-09-28",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 49.0
+      },
+      {
+        "payment_date": "2027-10-28",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 46.0
+      },
+      {
+        "payment_date": "2027-11-27",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 43.0
+      },
+      {
+        "payment_date": "2027-12-27",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 40.0
+      },
+      {
+        "payment_date": "2028-01-26",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 37.0
+      },
+      {
+        "payment_date": "2028-02-25",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 34.0
+      },
+      {
+        "payment_date": "2028-03-26",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 31.0
+      },
+      {
+        "payment_date": "2028-04-25",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 28.0
+      },
+      {
+        "payment_date": "2028-05-25",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 25.0
+      },
+      {
+        "payment_date": "2028-06-24",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 22.0
+      },
+      {
+        "payment_date": "2028-07-24",
+        "amortization_percent": 1.5,
+        "residual_nominal_percent": 20.5
+      },
+      {
+        "payment_date": "2028-08-23",
+        "amortization_percent": 1.5,
+        "residual_nominal_percent": 19.0
+      },
+      {
+        "payment_date": "2028-09-22",
+        "amortization_percent": 1.5,
+        "residual_nominal_percent": 17.5
+      },
+      {
+        "payment_date": "2028-10-22",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 14.5
+      },
+      {
+        "payment_date": "2028-11-21",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 11.5
+      },
+      {
+        "payment_date": "2028-12-21",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 8.5
+      },
+      {
+        "payment_date": "2029-01-20",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 5.5
+      },
+      {
+        "payment_date": "2029-02-19",
+        "amortization_percent": 5.5,
+        "residual_nominal_percent": 0.0
+      }
+    ],
+    "quotes": {
+      "reg_number": "Государственный регистрационный номер выпуска: 4B02-02-00799-R-001P",
+      "issuer_inn": "ИНН: 7801271157",
+      "nominal_value": "Номинальная стоимость: 775.0"
+    }
+  },
+  "critical_fields": [
+    "reg_number",
+    "isin",
+    "issuer_inn",
+    "nominal_value",
+    "currency",
+    "maturity_date",
+    "coupon_type",
+    "coupons_count",
+    "amortization_sum"
+  ]
+}

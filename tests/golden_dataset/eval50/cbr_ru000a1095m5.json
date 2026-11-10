@@ -1,0 +1,133 @@
+{
+  "id": "cbr_ru000a1095m5",
+  "title": "ЦБ: ВТБ Б1-360",
+  "source": "cbr",
+  "tags": [
+    "cbr",
+    "floater"
+  ],
+  "input_markdown": "БАНК РОССИИ\nСведения из реестра эмиссионных ценных бумаг\n\nПолное наименование эмитента: БАНК ВТБ (ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО)\nИНН эмитента: 7702070139\nГосударственный регистрационный номер выпуска: 4B02-360-01000-B-001P\nISIN: RU000A1095M5\nВалюта номинала ценной бумаги: российский рубль (RUB)\nНоминальная стоимость одной ценной бумаги: 1 000,00 руб.\nКоличество ценных бумаг в выпуске: 50000000 шт.\nДата начала размещения: 06.08.2024\nДата погашения: 31.07.2029\n\nПорядок определения процентной ставки:\nИндикатор: RUONIA.\nСпред составляет 1.55 процента годовых.\nФормула: Ставка RUONIA.\nКупонный доход является плавающим (флоатер).\n\n| № купонного периода | Дата начала | Дата окончания (выплаты) | Ставка, % годовых | Размер выплаты, руб. |\n| --- | --- | --- | --- | --- |\n| 1 | 06.08.2024 | 05.11.2024 |  | 49.4 |\n| 2 | 05.11.2024 | 04.02.2025 |  | 55.73 |\n| 3 | 04.02.2025 | 06.05.2025 |  | 56.45 |\n| 4 | 06.05.2025 | 05.08.2025 |  | 53.99 |\n| 5 | 05.08.2025 | 04.11.2025 |  | 46.76 |\n| 6 | 04.11.2025 | 03.02.2026 |  | 43.89 |\n| 7 | 03.02.2026 | 05.05.2026 |  | 41.33 |\n| 8 | 05.05.2026 | 04.08.2026 |  | 39.23 |\n| 9 | 04.08.2026 | 03.11.2026 |  | 38.59 |\n| 10 | 03.11.2026 | 02.02.2027 |  |  |\n| 11 | 02.02.2027 | 04.05.2027 |  |  |\n| 12 | 04.05.2027 | 03.08.2027 |  |  |",
+  "expected": {
+    "isin": "RU000A1095M5",
+    "reg_number": "4B02-360-01000-B-001P",
+    "issuer_name": "БАНК ВТБ (ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО)",
+    "issuer_inn": "7702070139",
+    "nominal_value": 1000.0,
+    "currency": "RUB",
+    "issue_volume": 50000000,
+    "placement_start_date": "2024-08-06",
+    "maturity_date": "2029-07-31",
+    "coupon_type": "FLOATER",
+    "floater_formula": {
+      "benchmark": "RUONIA",
+      "spread_percent": 1.55,
+      "observation_shift_days": 5,
+      "averaging_type": "POINT_IN_TIME",
+      "raw_formula_text": "Ставка RUONIA"
+    },
+    "coupons": [
+      {
+        "coupon_number": 1,
+        "start_date": "2024-08-06",
+        "end_date": "2024-11-05",
+        "rate_percent": null,
+        "payment_amount": 49.4
+      },
+      {
+        "coupon_number": 2,
+        "start_date": "2024-11-05",
+        "end_date": "2025-02-04",
+        "rate_percent": null,
+        "payment_amount": 55.73
+      },
+      {
+        "coupon_number": 3,
+        "start_date": "2025-02-04",
+        "end_date": "2025-05-06",
+        "rate_percent": null,
+        "payment_amount": 56.45
+      },
+      {
+        "coupon_number": 4,
+        "start_date": "2025-05-06",
+        "end_date": "2025-08-05",
+        "rate_percent": null,
+        "payment_amount": 53.99
+      },
+      {
+        "coupon_number": 5,
+        "start_date": "2025-08-05",
+        "end_date": "2025-11-04",
+        "rate_percent": null,
+        "payment_amount": 46.76
+      },
+      {
+        "coupon_number": 6,
+        "start_date": "2025-11-04",
+        "end_date": "2026-02-03",
+        "rate_percent": null,
+        "payment_amount": 43.89
+      },
+      {
+        "coupon_number": 7,
+        "start_date": "2026-02-03",
+        "end_date": "2026-05-05",
+        "rate_percent": null,
+        "payment_amount": 41.33
+      },
+      {
+        "coupon_number": 8,
+        "start_date": "2026-05-05",
+        "end_date": "2026-08-04",
+        "rate_percent": null,
+        "payment_amount": 39.23
+      },
+      {
+        "coupon_number": 9,
+        "start_date": "2026-08-04",
+        "end_date": "2026-11-03",
+        "rate_percent": null,
+        "payment_amount": 38.59
+      },
+      {
+        "coupon_number": 10,
+        "start_date": "2026-11-03",
+        "end_date": "2027-02-02",
+        "rate_percent": null,
+        "payment_amount": null
+      },
+      {
+        "coupon_number": 11,
+        "start_date": "2027-02-02",
+        "end_date": "2027-05-04",
+        "rate_percent": null,
+        "payment_amount": null
+      },
+      {
+        "coupon_number": 12,
+        "start_date": "2027-05-04",
+        "end_date": "2027-08-03",
+        "rate_percent": null,
+        "payment_amount": null
+      }
+    ],
+    "amortization": [],
+    "quotes": {
+      "reg_number": "Государственный регистрационный номер выпуска: 4B02-360-01000-B-001P",
+      "issuer_inn": "ИНН: 7702070139",
+      "nominal_value": "Номинальная стоимость: 1000.0"
+    }
+  },
+  "critical_fields": [
+    "reg_number",
+    "isin",
+    "issuer_inn",
+    "nominal_value",
+    "currency",
+    "maturity_date",
+    "coupon_type",
+    "coupons_count",
+    "benchmark",
+    "spread_percent"
+  ]
+}

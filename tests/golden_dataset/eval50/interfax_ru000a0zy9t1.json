@@ -1,0 +1,125 @@
+{
+  "id": "interfax_ru000a0zy9t1",
+  "title": "ЦРКИ: ПСНПрМдБП1",
+  "source": "interfax_crki",
+  "tags": [
+    "interfax_crki",
+    "fixed"
+  ],
+  "input_markdown": "Сообщение о существенном факте\nИнтерфакс — Центр раскрытия корпоративной информации\n\nЭмитент: ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПСН ПРОПЕРТИ МЕНЕДЖМЕНТ\"\nИНН: 7725637463\nВид ценных бумаг: биржевые облигации\nГосударственный регистрационный номер выпуска: 4B02-01-36515-R-001P\nISIN код: RU000A0ZY9T1\n\n## Сведения о размещаемых ценных бумагах\nНоминальная стоимость одной биржевой облигации составляет 1000 (1 000,00) рублей.\nВалюта номинала: российский рубль (RUB).\nКоличество ценных бумаг выпуска: 6100171 (штук).\nДата начала размещения: 12.09.2017\nДата погашения: 31.08.2027\n\n## Срок и порядок выплаты купонного дохода\nКупонный доход является фиксированным.\nСтавка купона составляет 12,00 процента годовых.\n\n| № купонного периода | Дата начала | Дата окончания (выплаты) | Ставка, % годовых | Размер выплаты, руб. |\n| --- | --- | --- | --- | --- |\n| 1 | 12.09.2017 | 26.03.2018 | 12.0 | 64.11 |\n| 2 | 26.03.2018 | 24.09.2018 | 12.0 | 59.84 |\n| 3 | 24.09.2018 | 25.03.2019 | 12.0 | 59.84 |\n| 4 | 25.03.2019 | 23.09.2019 | 12.0 | 59.84 |\n| 5 | 23.09.2019 | 23.03.2020 |  |  |\n| 6 | 23.03.2020 | 21.09.2020 |  |  |\n| 7 | 21.09.2020 | 22.03.2021 |  |  |\n| 8 | 22.03.2021 | 20.09.2021 |  |  |\n| 9 | 20.09.2021 | 21.03.2022 |  |  |\n| 10 | 21.03.2022 | 19.09.2022 |  |  |\n| 11 | 19.09.2022 | 20.03.2023 |  |  |\n| 12 | 20.03.2023 | 18.09.2023 |  |  |\n\nИсточник раскрытия: Интерфакс-ЦРКИ (e-disclosure.ru).\nТекст собран по рыночным атрибутам выпуска (сайт ЦРКИ требует CAPTCHA).",
+  "expected": {
+    "isin": "RU000A0ZY9T1",
+    "reg_number": "4B02-01-36515-R-001P",
+    "issuer_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПСН ПРОПЕРТИ МЕНЕДЖМЕНТ\"",
+    "issuer_inn": "7725637463",
+    "nominal_value": 1000.0,
+    "currency": "RUB",
+    "issue_volume": 6100171,
+    "placement_start_date": "2017-09-12",
+    "maturity_date": "2027-08-31",
+    "coupon_type": "FIXED",
+    "floater_formula": null,
+    "coupons": [
+      {
+        "coupon_number": 1,
+        "start_date": "2017-09-12",
+        "end_date": "2018-03-26",
+        "rate_percent": 12.0,
+        "payment_amount": 64.11
+      },
+      {
+        "coupon_number": 2,
+        "start_date": "2018-03-26",
+        "end_date": "2018-09-24",
+        "rate_percent": 12.0,
+        "payment_amount": 59.84
+      },
+      {
+        "coupon_number": 3,
+        "start_date": "2018-09-24",
+        "end_date": "2019-03-25",
+        "rate_percent": 12.0,
+        "payment_amount": 59.84
+      },
+      {
+        "coupon_number": 4,
+        "start_date": "2019-03-25",
+        "end_date": "2019-09-23",
+        "rate_percent": 12.0,
+        "payment_amount": 59.84
+      },
+      {
+        "coupon_number": 5,
+        "start_date": "2019-09-23",
+        "end_date": "2020-03-23",
+        "rate_percent": null,
+        "payment_amount": null
+      },
+      {
+        "coupon_number": 6,
+        "start_date": "2020-03-23",
+        "end_date": "2020-09-21",
+        "rate_percent": null,
+        "payment_amount": null
+      },
+      {
+        "coupon_number": 7,
+        "start_date": "2020-09-21",
+        "end_date": "2021-03-22",
+        "rate_percent": null,
+        "payment_amount": null
+      },
+      {
+        "coupon_number": 8,
+        "start_date": "2021-03-22",
+        "end_date": "2021-09-20",
+        "rate_percent": null,
+        "payment_amount": null
+      },
+      {
+        "coupon_number": 9,
+        "start_date": "2021-09-20",
+        "end_date": "2022-03-21",
+        "rate_percent": null,
+        "payment_amount": null
+      },
+      {
+        "coupon_number": 10,
+        "start_date": "2022-03-21",
+        "end_date": "2022-09-19",
+        "rate_percent": null,
+        "payment_amount": null
+      },
+      {
+        "coupon_number": 11,
+        "start_date": "2022-09-19",
+        "end_date": "2023-03-20",
+        "rate_percent": null,
+        "payment_amount": null
+      },
+      {
+        "coupon_number": 12,
+        "start_date": "2023-03-20",
+        "end_date": "2023-09-18",
+        "rate_percent": null,
+        "payment_amount": null
+      }
+    ],
+    "amortization": [],
+    "quotes": {
+      "reg_number": "Государственный регистрационный номер выпуска: 4B02-01-36515-R-001P",
+      "issuer_inn": "ИНН: 7725637463",
+      "nominal_value": "Номинальная стоимость: 1000.0"
+    }
+  },
+  "critical_fields": [
+    "reg_number",
+    "isin",
+    "issuer_inn",
+    "nominal_value",
+    "currency",
+    "maturity_date",
+    "coupon_type",
+    "coupons_count"
+  ]
+}

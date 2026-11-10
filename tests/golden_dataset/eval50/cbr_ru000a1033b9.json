@@ -1,0 +1,172 @@
+{
+  "id": "cbr_ru000a1033b9",
+  "title": "ЦБ: Якут-35015",
+  "source": "cbr",
+  "tags": [
+    "cbr",
+    "fixed"
+  ],
+  "input_markdown": "БАНК РОССИИ\nСведения из реестра эмиссионных ценных бумаг\n\nПолное наименование эмитента: МИНИСТЕРСТВО ФИНАНСОВ РЕСПУБЛИКИ САХА (ЯКУТИЯ)\nИНН эмитента: 1435027673\nГосударственный регистрационный номер выпуска: RU35015RSY0\nISIN: RU000A1033B9\nВалюта номинала ценной бумаги: российский рубль (RUB)\nНоминальная стоимость одной ценной бумаги: 400,00 руб.\nКоличество ценных бумаг в выпуске: 6500000 шт.\nДата начала размещения: 17.05.2021\nДата погашения: 08.05.2028\n\nКупонный доход является фиксированным.\nСтавка купона: 7,25 процента годовых.\n\n| № купонного периода | Дата начала | Дата окончания (выплаты) | Ставка, % годовых | Размер выплаты, руб. |\n| --- | --- | --- | --- | --- |\n| 1 | 17.05.2021 | 16.08.2021 | 7.25 | 18.08 |\n| 2 | 16.08.2021 | 15.11.2021 | 7.25 | 18.08 |\n| 3 | 15.11.2021 | 14.02.2022 | 7.25 | 18.08 |\n| 4 | 14.02.2022 | 16.05.2022 | 7.25 | 18.08 |\n| 5 | 16.05.2022 | 15.08.2022 | 7.25 | 18.08 |\n| 6 | 15.08.2022 | 14.11.2022 | 7.25 | 18.08 |\n| 7 | 14.11.2022 | 13.02.2023 | 7.25 | 16.27 |\n| 8 | 13.02.2023 | 15.05.2023 | 7.25 | 16.27 |\n| 9 | 15.05.2023 | 14.08.2023 | 7.25 | 16.27 |\n| 10 | 14.08.2023 | 13.11.2023 | 7.25 | 16.27 |\n| 11 | 13.11.2023 | 12.02.2024 | 7.25 | 14.46 |\n| 12 | 12.02.2024 | 13.05.2024 | 7.25 | 14.46 |\n\n## Порядок и условия погашения\nПогашение номинальной стоимости осуществляется частично (амортизация):\n\n| Дата | Процент погашения от номинала | Остаток номинала, % |\n| --- | --- | --- |\n| 14.11.2022 | 10.0 | 90.0 |\n| 13.11.2023 | 10.0 | 80.0 |\n| 11.08.2025 | 10.0 | 70.0 |\n| 10.11.2025 | 10.0 | 60.0 |\n| 10.08.2026 | 10.0 | 50.0 |\n| 09.11.2026 | 10.0 | 40.0 |\n| 09.08.2027 | 10.0 | 30.0 |\n| 08.11.2027 | 10.0 | 20.0 |\n| 08.05.2028 | 20.0 | 0.0 |",
+  "expected": {
+    "isin": "RU000A1033B9",
+    "reg_number": "RU35015RSY0",
+    "issuer_name": "МИНИСТЕРСТВО ФИНАНСОВ РЕСПУБЛИКИ САХА (ЯКУТИЯ)",
+    "issuer_inn": "1435027673",
+    "nominal_value": 400.0,
+    "currency": "RUB",
+    "issue_volume": 6500000,
+    "placement_start_date": "2021-05-17",
+    "maturity_date": "2028-05-08",
+    "coupon_type": "FIXED",
+    "floater_formula": null,
+    "coupons": [
+      {
+        "coupon_number": 1,
+        "start_date": "2021-05-17",
+        "end_date": "2021-08-16",
+        "rate_percent": 7.25,
+        "payment_amount": 18.08
+      },
+      {
+        "coupon_number": 2,
+        "start_date": "2021-08-16",
+        "end_date": "2021-11-15",
+        "rate_percent": 7.25,
+        "payment_amount": 18.08
+      },
+      {
+        "coupon_number": 3,
+        "start_date": "2021-11-15",
+        "end_date": "2022-02-14",
+        "rate_percent": 7.25,
+        "payment_amount": 18.08
+      },
+      {
+        "coupon_number": 4,
+        "start_date": "2022-02-14",
+        "end_date": "2022-05-16",
+        "rate_percent": 7.25,
+        "payment_amount": 18.08
+      },
+      {
+        "coupon_number": 5,
+        "start_date": "2022-05-16",
+        "end_date": "2022-08-15",
+        "rate_percent": 7.25,
+        "payment_amount": 18.08
+      },
+      {
+        "coupon_number": 6,
+        "start_date": "2022-08-15",
+        "end_date": "2022-11-14",
+        "rate_percent": 7.25,
+        "payment_amount": 18.08
+      },
+      {
+        "coupon_number": 7,
+        "start_date": "2022-11-14",
+        "end_date": "2023-02-13",
+        "rate_percent": 7.25,
+        "payment_amount": 16.27
+      },
+      {
+        "coupon_number": 8,
+        "start_date": "2023-02-13",
+        "end_date": "2023-05-15",
+        "rate_percent": 7.25,
+        "payment_amount": 16.27
+      },
+      {
+        "coupon_number": 9,
+        "start_date": "2023-05-15",
+        "end_date": "2023-08-14",
+        "rate_percent": 7.25,
+        "payment_amount": 16.27
+      },
+      {
+        "coupon_number": 10,
+        "start_date": "2023-08-14",
+        "end_date": "2023-11-13",
+        "rate_percent": 7.25,
+        "payment_amount": 16.27
+      },
+      {
+        "coupon_number": 11,
+        "start_date": "2023-11-13",
+        "end_date": "2024-02-12",
+        "rate_percent": 7.25,
+        "payment_amount": 14.46
+      },
+      {
+        "coupon_number": 12,
+        "start_date": "2024-02-12",
+        "end_date": "2024-05-13",
+        "rate_percent": 7.25,
+        "payment_amount": 14.46
+      }
+    ],
+    "amortization": [
+      {
+        "payment_date": "2022-11-14",
+        "amortization_percent": 10.0,
+        "residual_nominal_percent": 90.0
+      },
+      {
+        "payment_date": "2023-11-13",
+        "amortization_percent": 10.0,
+        "residual_nominal_percent": 80.0
+      },
+      {
+        "payment_date": "2025-08-11",
+        "amortization_percent": 10.0,
+        "residual_nominal_percent": 70.0
+      },
+      {
+        "payment_date": "2025-11-10",
+        "amortization_percent": 10.0,
+        "residual_nominal_percent": 60.0
+      },
+      {
+        "payment_date": "2026-08-10",
+        "amortization_percent": 10.0,
+        "residual_nominal_percent": 50.0
+      },
+      {
+        "payment_date": "2026-11-09",
+        "amortization_percent": 10.0,
+        "residual_nominal_percent": 40.0
+      },
+      {
+        "payment_date": "2027-08-09",
+        "amortization_percent": 10.0,
+        "residual_nominal_percent": 30.0
+      },
+      {
+        "payment_date": "2027-11-08",
+        "amortization_percent": 10.0,
+        "residual_nominal_percent": 20.0
+      },
+      {
+        "payment_date": "2028-05-08",
+        "amortization_percent": 20.0,
+        "residual_nominal_percent": 0.0
+      }
+    ],
+    "quotes": {
+      "reg_number": "Государственный регистрационный номер выпуска: RU35015RSY0",
+      "issuer_inn": "ИНН: 1435027673",
+      "nominal_value": "Номинальная стоимость: 400.0"
+    }
+  },
+  "critical_fields": [
+    "reg_number",
+    "isin",
+    "issuer_inn",
+    "nominal_value",
+    "currency",
+    "maturity_date",
+    "coupon_type",
+    "coupons_count",
+    "amortization_sum"
+  ]
+}

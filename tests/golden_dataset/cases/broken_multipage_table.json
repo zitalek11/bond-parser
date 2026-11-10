@@ -1,0 +1,51 @@
+{
+  "id": "broken_multipage_table",
+  "title": "Разорванная таблица купонов/амортизации на 2 страницах (без шапки на стр.2)",
+  "tags": ["tables", "stitch", "amortization"],
+  "input_markdown": "# Решение о выпуске биржевых облигаций серии 002P-01\n\n## Сведения о размещаемых ценных бумагах\n\nЭмитент: Публичное акционерное общество «Газпром нефть»\nИНН 5504036333\nГосударственный регистрационный номер: 4B02-01-00146-A-002P\nISIN: RU000A10C3D4\nНоминальная стоимость: 1 000 рублей.\nКоличество: 15 000 000 штук.\nДата начала размещения: 12.02.2025.\nДата погашения: 12.02.2030.\nТип купона: фиксированный, ставка 13,50% годовых.\n\n## Срок и порядок выплаты купонного дохода\n\n## Страница 1\n\n| № | Дата начала | Дата окончания | Ставка % | Выплата, руб. |\n| --- | --- | --- | --- | --- |\n| 1 | 12.02.2025 | 12.08.2025 | 13.50 | 67.50 |\n| 2 | 12.08.2025 | 12.02.2026 | 13.50 | 67.50 |\n| 3 | 12.02.2026 | 12.08.2026 | 13.50 | 67.50 |\n| 4 | 12.08.2026 | 12.02.2027 | 13.50 | 67.50 |\n| 5 | 12.02.2027 | 12.08.2027 | 13.50 | 67.50 |\n\n## Страница 2\n\n| 6 | 12.08.2027 | 12.02.2028 | 13.50 | 67.50 |\n| 7 | 12.02.2028 | 12.08.2028 | 13.50 | 67.50 |\n| 8 | 12.08.2028 | 12.02.2029 | 13.50 | 67.50 |\n| 9 | 12.02.2029 | 12.08.2029 | 13.50 | 67.50 |\n| 10 | 12.08.2029 | 12.02.2030 | 13.50 | 67.50 |\n\n## Порядок и условия погашения\n\n## Страница 1\n\nЧастичное погашение номинальной стоимости:\n\n| Купон | % погашения | Остаток номинала % |\n| --- | --- | --- |\n| 4 | 25 | 75 |\n| 6 | 25 | 50 |\n\n## Страница 2\n\n| 8 | 25 | 25 |\n| 10 | 25 | 0 |\n",
+  "preprocess": "stitch_tables",
+  "expected": {
+    "isin": "RU000A10C3D4",
+    "reg_number": "4B02-01-00146-A-002P",
+    "issuer_name": "Публичное акционерное общество «Газпром нефть»",
+    "issuer_inn": "5504036333",
+    "nominal_value": 1000.0,
+    "currency": "RUB",
+    "issue_volume": 15000000,
+    "placement_start_date": "2025-02-12",
+    "maturity_date": "2030-02-12",
+    "coupon_type": "FIXED",
+    "floater_formula": null,
+    "coupons": [
+      {"coupon_number": 1, "start_date": "2025-02-12", "end_date": "2025-08-12", "rate_percent": 13.5, "payment_amount": 67.5},
+      {"coupon_number": 2, "start_date": "2025-08-12", "end_date": "2026-02-12", "rate_percent": 13.5, "payment_amount": 67.5},
+      {"coupon_number": 3, "start_date": "2026-02-12", "end_date": "2026-08-12", "rate_percent": 13.5, "payment_amount": 67.5},
+      {"coupon_number": 4, "start_date": "2026-08-12", "end_date": "2027-02-12", "rate_percent": 13.5, "payment_amount": 67.5},
+      {"coupon_number": 5, "start_date": "2027-02-12", "end_date": "2027-08-12", "rate_percent": 13.5, "payment_amount": 67.5},
+      {"coupon_number": 6, "start_date": "2027-08-12", "end_date": "2028-02-12", "rate_percent": 13.5, "payment_amount": 67.5},
+      {"coupon_number": 7, "start_date": "2028-02-12", "end_date": "2028-08-12", "rate_percent": 13.5, "payment_amount": 67.5},
+      {"coupon_number": 8, "start_date": "2028-08-12", "end_date": "2029-02-12", "rate_percent": 13.5, "payment_amount": 67.5},
+      {"coupon_number": 9, "start_date": "2029-02-12", "end_date": "2029-08-12", "rate_percent": 13.5, "payment_amount": 67.5},
+      {"coupon_number": 10, "start_date": "2029-08-12", "end_date": "2030-02-12", "rate_percent": 13.5, "payment_amount": 67.5}
+    ],
+    "amortization": [
+      {"coupon_number": 4, "amortization_percent": 25.0, "residual_nominal_percent": 75.0},
+      {"coupon_number": 6, "amortization_percent": 25.0, "residual_nominal_percent": 50.0},
+      {"coupon_number": 8, "amortization_percent": 25.0, "residual_nominal_percent": 25.0},
+      {"coupon_number": 10, "amortization_percent": 25.0, "residual_nominal_percent": 0.0}
+    ],
+    "quotes": {
+      "reg_number": "Государственный регистрационный номер: 4B02-01-00146-A-002P",
+      "issuer_inn": "ИНН 5504036333",
+      "nominal_value": "Номинальная стоимость: 1 000 рублей."
+    }
+  },
+  "critical_fields": [
+    "reg_number",
+    "nominal_value",
+    "coupon_type",
+    "coupons_count",
+    "amortization_sum",
+    "amortization_coupon_numbers"
+  ]
+}

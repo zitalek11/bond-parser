@@ -1,0 +1,125 @@
+{
+  "id": "cbr_ru000a10ahe5",
+  "title": "ЦБ: НовТех1Р2",
+  "source": "cbr",
+  "tags": [
+    "cbr",
+    "fixed"
+  ],
+  "input_markdown": "БАНК РОССИИ\nСведения из реестра эмиссионных ценных бумаг\n\nПолное наименование эмитента: ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НОВЫЕ ТЕХНОЛОГИИ\"\nИНН эмитента: 1652009537\nГосударственный регистрационный номер выпуска: 4B02-02-00069-L-001P\nISIN: RU000A10AHE5\nВалюта номинала ценной бумаги: российский рубль (RUB)\nНоминальная стоимость одной ценной бумаги: 1 000,00 руб.\nКоличество ценных бумаг в выпуске: 1150000 шт.\nДата начала размещения: 26.12.2024\nДата погашения: 16.12.2026\n\nКупонный доход является фиксированным.\nСтавка купона: 27,50 процента годовых.\n\n| № купонного периода | Дата начала | Дата окончания (выплаты) | Ставка, % годовых | Размер выплаты, руб. |\n| --- | --- | --- | --- | --- |\n| 1 | 26.12.2024 | 25.01.2025 | 27.5 | 22.6 |\n| 2 | 25.01.2025 | 24.02.2025 | 27.5 | 22.6 |\n| 3 | 24.02.2025 | 26.03.2025 | 27.5 | 22.6 |\n| 4 | 26.03.2025 | 25.04.2025 | 27.5 | 22.6 |\n| 5 | 25.04.2025 | 25.05.2025 | 27.5 | 22.6 |\n| 6 | 25.05.2025 | 24.06.2025 | 27.5 | 22.6 |\n| 7 | 24.06.2025 | 24.07.2025 | 27.5 | 22.6 |\n| 8 | 24.07.2025 | 23.08.2025 | 27.5 | 22.6 |\n| 9 | 23.08.2025 | 22.09.2025 | 27.5 | 22.6 |\n| 10 | 22.09.2025 | 22.10.2025 | 27.5 | 22.6 |\n| 11 | 22.10.2025 | 21.11.2025 | 27.5 | 22.6 |\n| 12 | 21.11.2025 | 21.12.2025 | 27.5 | 22.6 |",
+  "expected": {
+    "isin": "RU000A10AHE5",
+    "reg_number": "4B02-02-00069-L-001P",
+    "issuer_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"НОВЫЕ ТЕХНОЛОГИИ\"",
+    "issuer_inn": "1652009537",
+    "nominal_value": 1000.0,
+    "currency": "RUB",
+    "issue_volume": 1150000,
+    "placement_start_date": "2024-12-26",
+    "maturity_date": "2026-12-16",
+    "coupon_type": "FIXED",
+    "floater_formula": null,
+    "coupons": [
+      {
+        "coupon_number": 1,
+        "start_date": "2024-12-26",
+        "end_date": "2025-01-25",
+        "rate_percent": 27.5,
+        "payment_amount": 22.6
+      },
+      {
+        "coupon_number": 2,
+        "start_date": "2025-01-25",
+        "end_date": "2025-02-24",
+        "rate_percent": 27.5,
+        "payment_amount": 22.6
+      },
+      {
+        "coupon_number": 3,
+        "start_date": "2025-02-24",
+        "end_date": "2025-03-26",
+        "rate_percent": 27.5,
+        "payment_amount": 22.6
+      },
+      {
+        "coupon_number": 4,
+        "start_date": "2025-03-26",
+        "end_date": "2025-04-25",
+        "rate_percent": 27.5,
+        "payment_amount": 22.6
+      },
+      {
+        "coupon_number": 5,
+        "start_date": "2025-04-25",
+        "end_date": "2025-05-25",
+        "rate_percent": 27.5,
+        "payment_amount": 22.6
+      },
+      {
+        "coupon_number": 6,
+        "start_date": "2025-05-25",
+        "end_date": "2025-06-24",
+        "rate_percent": 27.5,
+        "payment_amount": 22.6
+      },
+      {
+        "coupon_number": 7,
+        "start_date": "2025-06-24",
+        "end_date": "2025-07-24",
+        "rate_percent": 27.5,
+        "payment_amount": 22.6
+      },
+      {
+        "coupon_number": 8,
+        "start_date": "2025-07-24",
+        "end_date": "2025-08-23",
+        "rate_percent": 27.5,
+        "payment_amount": 22.6
+      },
+      {
+        "coupon_number": 9,
+        "start_date": "2025-08-23",
+        "end_date": "2025-09-22",
+        "rate_percent": 27.5,
+        "payment_amount": 22.6
+      },
+      {
+        "coupon_number": 10,
+        "start_date": "2025-09-22",
+        "end_date": "2025-10-22",
+        "rate_percent": 27.5,
+        "payment_amount": 22.6
+      },
+      {
+        "coupon_number": 11,
+        "start_date": "2025-10-22",
+        "end_date": "2025-11-21",
+        "rate_percent": 27.5,
+        "payment_amount": 22.6
+      },
+      {
+        "coupon_number": 12,
+        "start_date": "2025-11-21",
+        "end_date": "2025-12-21",
+        "rate_percent": 27.5,
+        "payment_amount": 22.6
+      }
+    ],
+    "amortization": [],
+    "quotes": {
+      "reg_number": "Государственный регистрационный номер выпуска: 4B02-02-00069-L-001P",
+      "issuer_inn": "ИНН: 1652009537",
+      "nominal_value": "Номинальная стоимость: 1000.0"
+    }
+  },
+  "critical_fields": [
+    "reg_number",
+    "isin",
+    "issuer_inn",
+    "nominal_value",
+    "currency",
+    "maturity_date",
+    "coupon_type",
+    "coupons_count"
+  ]
+}

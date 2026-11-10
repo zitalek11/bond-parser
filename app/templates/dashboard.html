@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+{% block title %}Главная — {{ app_name }}{% endblock %}
+{% block content %}
+<div class="mb-6 flex flex-wrap items-end justify-between gap-4">
+  <div>
+    <h1 class="text-2xl font-semibold tracking-tight">Главная панель</h1>
+    <p class="mt-1 text-sm text-slate-600">Сбор, распознавание и проверка качества эмиссионной документации</p>
+  </div>
+  <div class="flex flex-wrap gap-2">
+    <form action="/collect" method="post">
+      <button type="submit" class="rounded-md bg-accent px-4 py-2 text-sm font-medium text-white hover:bg-teal-800">
+        Запустить сбор сейчас
+      </button>
+    </form>
+  </div>
+</div>
+
+<section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+  <div class="rounded-xl border border-line bg-white p-4">
+    <div class="text-xs uppercase tracking-wide text-slate-500">Всего документов</div>
+    <div class="mt-2 text-3xl font-semibold">{{ stats.total_tasks }}</div>
+  </div>
+  <div class="rounded-xl border border-line bg-white p-4">
+    <div class="text-xs uppercase tracking-wide text-slate-500">Автоматически принято</div>
+    <div class="mt-2 text-3xl font-semibold text-accent">{{ stats.auto_approved_pct }}%</div>
+    <div class="mt-1 text-xs text-slate-500">{{ stats.approved }} одобрено</div>
+  </div>
+  <div class="rounded-xl border border-line bg-white p-4">
+    <div class="text-xs uppercase tracking-wide text-slate-500">Ожидают проверки</div>
+    <div class="mt-2 text-3xl font-semibold text-warn">{{ stats.needs_review }}</div>
+    <a href="/queue" class="mt-1 inline-block text-xs text-accent underline">открыть очередь</a>
+  </div>
+  <div class="rounded-xl border border-line bg-white p-4">
+    <div class="text-xs uppercase tracking-wide text-slate-500">Выпуски в базе</div>
+    <div class="mt-2 text-3xl font-semibold">{{ stats.bonds }}</div>
+    <div class="mt-1 text-xs text-slate-500">отклонено {{ stats.rejected }} · ошибок {{ stats.failed }}</div>
+  </div>
+</section>
+
+{% if quality %}
+<section class="mt-8 rounded-xl border border-line bg-white p-5">
+  <div class="flex flex-wrap items-end justify-between gap-3">
+    <div>
+      <h2 class="text-base font-semibold">Качество распознавания (eval-50)</h2>
+      <p class="mt-1 text-sm text-slate-600">
+        {{ quality.cases }} выпусков · эталон ЦБ РФ + MOEX · формат раскрытия Интерфакс-ЦРКИ · движок {{ quality.engine }}
+      </p>
+    </div>
+    <div class="text-right">
+      <div class="text-3xl font-semibold text-accent">{{ "%.1f"|format(quality.field_accuracy_pct) }}%</div>
+      <div class="text-xs text-slate-500">точность полей · точных документов {{ "%.1f"|format(quality.doc_exact_pct) }}%</div>
+    </div>
+  </div>
+  <div class="mt-4 grid gap-3 sm:grid-cols-2">
+    {% for src, bucket in quality.by_source.items() %}
+    <div class="rounded-lg border border-line bg-panel px-4 py-3 text-sm">
+      <div class="text-xs uppercase tracking-wide text-slate-500">
+        {% if src == 'cbr' %}Банк России{% elif src == 'interfax_crki' %}Интерфакс-ЦРКИ{% else %}{{ src }}{% endif %}
+      </div>
+      <div class="mt-1 font-semibold">{{ "%.1f"|format(bucket.field_accuracy_pct) }}% полей</div>
+      <div class="text-xs text-slate-500">{{ bucket.cases }} кейсов · точных документов {{ "%.1f"|format(bucket.doc_exact_pct) }}%</div>
+    </div>
+    {% endfor %}
+  </div>
+  <p class="mt-3 text-xs text-slate-500">
+    Прогон: {{ quality.built_at }} · {{ quality.fields_ok }}/{{ quality.fields_total }} критичных полей.
+    Пересчёт: <code class="rounded bg-slate-100 px-1">python -m tests.golden_dataset.run_benchmark --mock --cases-dir tests/golden_dataset/eval50 --report storage/eval50/report.json</code>
+  </p>
+</section>
+{% endif %}
+
+<section class="mt-8 rounded-xl border border-line bg-white p-5">
+  <h2 class="text-base font-semibold">Экспорт данных</h2>
+  <p class="mt-1 text-sm text-slate-600">
+    Выгрузка одобренных выпусков в Excel для учёта и CSV-реестр для Excel в РФ (кодировка UTF-8 с BOM, разделитель «;»).
+  </p>
+  <div class="mt-4 flex flex-wrap gap-2">
+    <a href="/api/export/xlsx?only_new=true"
+       class="rounded-md bg-accent px-4 py-2 text-sm font-medium text-white hover:bg-teal-800">
+      Скачать новые одобренные (.xlsx)
+    </a>
+    <a href="/api/export/xlsx"
+       class="rounded-md bg-ink px-4 py-2 text-sm font-medium text-white hover:bg-slate-800">
+      Скачать всю базу (.xlsx)
+    </a>
+    <a href="/api/export/csv"
+       class="rounded-md border border-line bg-white px-4 py-2 text-sm font-medium text-ink hover:bg-slate-50">
+      Скачать базовый реестр (.csv)
+    </a>
+  </div>
+</section>
+
+<section class="mt-8 grid gap-6 lg:grid-cols-2">
+  <div class="rounded-xl border border-line bg-white p-5">
+    <h2 class="text-base font-semibold">Загрузить документ вручную</h2>
+    <p class="mt-1 text-sm text-slate-600">PDF / DOCX / TXT — сразу пойдёт в извлечение текста → распознавание → проверку качества</p>
+    <form action="/upload" method="post" enctype="multipart/form-data" class="mt-4 flex flex-wrap items-center gap-3">
+      <input type="file" name="file" accept=".pdf,.docx,.txt,.md" required
+             class="block w-full max-w-md text-sm file:mr-3 file:rounded-md file:border-0 file:bg-slate-100 file:px-3 file:py-2" />
+      <button type="submit" class="rounded-md bg-ink px-4 py-2 text-sm font-medium text-white hover:bg-slate-800">
+        Загрузить и обработать
+      </button>
+    </form>
+  </div>
+
+  <div class="rounded-xl border border-line bg-white p-5">
+    <h2 class="text-base font-semibold">Последние выпуски в базе</h2>
+    {% if bonds %}
+    <ul class="mt-3 divide-y divide-line text-sm">
+      {% for b in bonds %}
+      <li class="flex items-start justify-between gap-3 py-2">
+        <div>
+          <div class="font-medium">{{ b.issuer_name }}</div>
+          <div class="font-mono text-xs text-slate-500">{{ b.reg_number }}{% if b.isin %} · {{ b.isin }}{% endif %}</div>
+        </div>
+        <div class="text-right text-xs text-slate-500">
+          <div>{{ b.coupon_type | coupon_type_ru }}</div>
+          <div>{{ b.approval_mode | approval_mode_ru }}</div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="mt-3 text-sm text-slate-500">Пока пусто — загрузите документ или запустите сбор.</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="mt-8 rounded-xl border border-line bg-white">
+  <div class="border-b border-line px-5 py-3">
+    <h2 class="text-base font-semibold">Недавние задачи</h2>
+  </div>
+  <div class="overflow-x-auto">
+    <table class="min-w-full text-left text-sm">
+      <thead class="bg-panel text-xs uppercase tracking-wide text-slate-500">
+        <tr>
+          <th class="px-4 py-2 font-medium">№</th>
+          <th class="px-4 py-2 font-medium">Источник</th>
+          <th class="px-4 py-2 font-medium">Документ</th>
+          <th class="px-4 py-2 font-medium">Статус</th>
+          <th class="px-4 py-2 font-medium"></th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-line">
+        {% for t in recent %}
+        <tr>
+          <td class="px-4 py-2 font-mono text-xs">#{{ t.id }}</td>
+          <td class="px-4 py-2">{{ t.source | source_ru }}</td>
+          <td class="px-4 py-2">{{ t.title or t.original_filename or "—" }}</td>
+          <td class="px-4 py-2">
+            {% if t.status == 'APPROVED' %}
+              <span class="rounded bg-teal-50 px-2 py-0.5 text-xs font-medium text-accent">{{ t.status | status_ru }}</span>
+            {% elif t.status == 'NEEDS_REVIEW' %}
+              <span class="rounded bg-amber-50 px-2 py-0.5 text-xs font-medium text-warn">{{ t.status | status_ru }}</span>
+            {% elif t.status == 'FAILED' or t.status == 'REJECTED' %}
+              <span class="rounded bg-red-50 px-2 py-0.5 text-xs font-medium text-danger">{{ t.status | status_ru }}</span>
+            {% else %}
+              <span class="rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">{{ t.status | status_ru }}</span>
+            {% endif %}
+          </td>
+          <td class="px-4 py-2 text-right">
+            {% if t.status == 'NEEDS_REVIEW' %}
+              <a href="/review/{{ t.id }}" class="text-accent underline">проверить</a>
+            {% endif %}
+          </td>
+        </tr>
+        {% else %}
+        <tr><td colspan="5" class="px-4 py-6 text-center text-slate-500">Задач пока нет</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}

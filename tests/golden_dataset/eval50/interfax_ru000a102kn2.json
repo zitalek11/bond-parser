@@ -1,0 +1,152 @@
+{
+  "id": "interfax_ru000a102kn2",
+  "title": "ЦРКИ: КалинОбл20",
+  "source": "interfax_crki",
+  "tags": [
+    "interfax_crki",
+    "fixed"
+  ],
+  "input_markdown": "Сообщение о существенном факте\nИнтерфакс — Центр раскрытия корпоративной информации\n\nЭмитент: МИНИСТЕРСТВО ФИНАНСОВ КАЛИНИНГРАДСКОЙ ОБЛАСТИ\nИНН: 3905014118\nВид ценных бумаг: биржевые облигации\nГосударственный регистрационный номер выпуска: RU35003KLN0\nISIN код: RU000A102KN2\n\n## Сведения о размещаемых ценных бумагах\nНоминальная стоимость одной биржевой облигации составляет 300 (300,00) рублей.\nВалюта номинала: российский рубль (RUB).\nКоличество ценных бумаг выпуска: 2000000 (штук).\nДата начала размещения: 23.12.2020\nДата погашения: 16.06.2027\n\n## Срок и порядок выплаты купонного дохода\nКупонный доход является фиксированным.\nСтавка купона составляет 6,10 процента годовых.\n\n| № купонного периода | Дата начала | Дата окончания (выплаты) | Ставка, % годовых | Размер выплаты, руб. |\n| --- | --- | --- | --- | --- |\n| 1 | 23.12.2020 | 24.03.2021 | 6.1 | 15.21 |\n| 2 | 24.03.2021 | 23.06.2021 | 6.1 | 15.21 |\n| 3 | 23.06.2021 | 22.09.2021 | 6.1 | 15.21 |\n| 4 | 22.09.2021 | 22.12.2021 | 6.1 | 15.21 |\n| 5 | 22.12.2021 | 23.03.2022 | 6.1 | 15.21 |\n| 6 | 23.03.2022 | 22.06.2022 | 6.1 | 15.21 |\n| 7 | 22.06.2022 | 21.09.2022 | 6.1 | 15.21 |\n| 8 | 21.09.2022 | 21.12.2022 | 6.1 | 15.21 |\n| 9 | 21.12.2022 | 22.03.2023 | 6.1 | 15.21 |\n| 10 | 22.03.2023 | 21.06.2023 | 6.1 | 15.21 |\n| 11 | 21.06.2023 | 20.09.2023 | 6.1 | 12.93 |\n| 12 | 20.09.2023 | 20.12.2023 | 6.1 | 12.93 |\n\n## Порядок и условия погашения\nПогашение номинальной стоимости осуществляется частично (амортизация):\n\n| Дата | Процент погашения от номинала | Остаток номинала, % |\n| --- | --- | --- |\n| 21.06.2023 | 15.0 | 85.0 |\n| 19.06.2024 | 15.0 | 70.0 |\n| 18.06.2025 | 10.0 | 60.0 |\n| 17.06.2026 | 30.0 | 30.0 |\n| 16.06.2027 | 30.0 | 0.0 |\n\nИсточник раскрытия: Интерфакс-ЦРКИ (e-disclosure.ru).\nТекст собран по рыночным атрибутам выпуска (сайт ЦРКИ требует CAPTCHA).",
+  "expected": {
+    "isin": "RU000A102KN2",
+    "reg_number": "RU35003KLN0",
+    "issuer_name": "МИНИСТЕРСТВО ФИНАНСОВ КАЛИНИНГРАДСКОЙ ОБЛАСТИ",
+    "issuer_inn": "3905014118",
+    "nominal_value": 300.0,
+    "currency": "RUB",
+    "issue_volume": 2000000,
+    "placement_start_date": "2020-12-23",
+    "maturity_date": "2027-06-16",
+    "coupon_type": "FIXED",
+    "floater_formula": null,
+    "coupons": [
+      {
+        "coupon_number": 1,
+        "start_date": "2020-12-23",
+        "end_date": "2021-03-24",
+        "rate_percent": 6.1,
+        "payment_amount": 15.21
+      },
+      {
+        "coupon_number": 2,
+        "start_date": "2021-03-24",
+        "end_date": "2021-06-23",
+        "rate_percent": 6.1,
+        "payment_amount": 15.21
+      },
+      {
+        "coupon_number": 3,
+        "start_date": "2021-06-23",
+        "end_date": "2021-09-22",
+        "rate_percent": 6.1,
+        "payment_amount": 15.21
+      },
+      {
+        "coupon_number": 4,
+        "start_date": "2021-09-22",
+        "end_date": "2021-12-22",
+        "rate_percent": 6.1,
+        "payment_amount": 15.21
+      },
+      {
+        "coupon_number": 5,
+        "start_date": "2021-12-22",
+        "end_date": "2022-03-23",
+        "rate_percent": 6.1,
+        "payment_amount": 15.21
+      },
+      {
+        "coupon_number": 6,
+        "start_date": "2022-03-23",
+        "end_date": "2022-06-22",
+        "rate_percent": 6.1,
+        "payment_amount": 15.21
+      },
+      {
+        "coupon_number": 7,
+        "start_date": "2022-06-22",
+        "end_date": "2022-09-21",
+        "rate_percent": 6.1,
+        "payment_amount": 15.21
+      },
+      {
+        "coupon_number": 8,
+        "start_date": "2022-09-21",
+        "end_date": "2022-12-21",
+        "rate_percent": 6.1,
+        "payment_amount": 15.21
+      },
+      {
+        "coupon_number": 9,
+        "start_date": "2022-12-21",
+        "end_date": "2023-03-22",
+        "rate_percent": 6.1,
+        "payment_amount": 15.21
+      },
+      {
+        "coupon_number": 10,
+        "start_date": "2023-03-22",
+        "end_date": "2023-06-21",
+        "rate_percent": 6.1,
+        "payment_amount": 15.21
+      },
+      {
+        "coupon_number": 11,
+        "start_date": "2023-06-21",
+        "end_date": "2023-09-20",
+        "rate_percent": 6.1,
+        "payment_amount": 12.93
+      },
+      {
+        "coupon_number": 12,
+        "start_date": "2023-09-20",
+        "end_date": "2023-12-20",
+        "rate_percent": 6.1,
+        "payment_amount": 12.93
+      }
+    ],
+    "amortization": [
+      {
+        "payment_date": "2023-06-21",
+        "amortization_percent": 15.0,
+        "residual_nominal_percent": 85.0
+      },
+      {
+        "payment_date": "2024-06-19",
+        "amortization_percent": 15.0,
+        "residual_nominal_percent": 70.0
+      },
+      {
+        "payment_date": "2025-06-18",
+        "amortization_percent": 10.0,
+        "residual_nominal_percent": 60.0
+      },
+      {
+        "payment_date": "2026-06-17",
+        "amortization_percent": 30.0,
+        "residual_nominal_percent": 30.0
+      },
+      {
+        "payment_date": "2027-06-16",
+        "amortization_percent": 30.0,
+        "residual_nominal_percent": 0.0
+      }
+    ],
+    "quotes": {
+      "reg_number": "Государственный регистрационный номер выпуска: RU35003KLN0",
+      "issuer_inn": "ИНН: 3905014118",
+      "nominal_value": "Номинальная стоимость: 300.0"
+    }
+  },
+  "critical_fields": [
+    "reg_number",
+    "isin",
+    "issuer_inn",
+    "nominal_value",
+    "currency",
+    "maturity_date",
+    "coupon_type",
+    "coupons_count",
+    "amortization_sum"
+  ]
+}

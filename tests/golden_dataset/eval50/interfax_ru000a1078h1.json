@@ -1,0 +1,292 @@
+{
+  "id": "interfax_ru000a1078h1",
+  "title": "ЦРКИ: СОБИЛИЗ1Р3",
+  "source": "interfax_crki",
+  "tags": [
+    "interfax_crki",
+    "fixed"
+  ],
+  "input_markdown": "Сообщение о существенном факте\nИнтерфакс — Центр раскрытия корпоративной информации\n\nЭмитент: ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СОБИ-ЛИЗИНГ\"\nИНН: 2311127765\nВид ценных бумаг: биржевые облигации\nГосударственный регистрационный номер выпуска: 4B02-03-00632-R-001P\nISIN код: RU000A1078H1\n\n## Сведения о размещаемых ценных бумагах\nНоминальная стоимость одной биржевой облигации составляет 40 (40,00) рублей.\nВалюта номинала: российский рубль (RUB).\nКоличество ценных бумаг выпуска: 150000 (штук).\nДата начала размещения: 21.11.2023\nДата погашения: 05.11.2026\n\n## Срок и порядок выплаты купонного дохода\nКупонный доход является фиксированным.\nСтавка купона составляет 17,50 процента годовых.\n\n| № купонного периода | Дата начала | Дата окончания (выплаты) | Ставка, % годовых | Размер выплаты, руб. |\n| --- | --- | --- | --- | --- |\n| 1 | 21.11.2023 | 21.12.2023 | 17.5 | 14.38 |\n| 2 | 21.12.2023 | 20.01.2024 | 17.5 | 14.38 |\n| 3 | 20.01.2024 | 19.02.2024 | 17.5 | 14.38 |\n| 4 | 19.02.2024 | 20.03.2024 | 17.5 | 14.38 |\n| 5 | 20.03.2024 | 19.04.2024 | 17.5 | 13.95 |\n| 6 | 19.04.2024 | 19.05.2024 | 17.5 | 13.52 |\n| 7 | 19.05.2024 | 18.06.2024 | 17.5 | 13.09 |\n| 8 | 18.06.2024 | 18.07.2024 | 17.5 | 12.66 |\n| 9 | 18.07.2024 | 17.08.2024 | 17.5 | 12.23 |\n| 10 | 17.08.2024 | 16.09.2024 | 17.5 | 11.79 |\n| 11 | 16.09.2024 | 16.10.2024 | 17.5 | 11.36 |\n| 12 | 16.10.2024 | 15.11.2024 | 17.5 | 10.93 |\n\n## Порядок и условия погашения\nПогашение номинальной стоимости осуществляется частично (амортизация):\n\n| Дата | Процент погашения от номинала | Остаток номинала, % |\n| --- | --- | --- |\n| 20.03.2024 | 3.0 | 97.0 |\n| 19.04.2024 | 3.0 | 94.0 |\n| 19.05.2024 | 3.0 | 91.0 |\n| 18.06.2024 | 3.0 | 88.0 |\n| 18.07.2024 | 3.0 | 85.0 |\n| 17.08.2024 | 3.0 | 82.0 |\n| 16.09.2024 | 3.0 | 79.0 |\n| 16.10.2024 | 3.0 | 76.0 |\n| 15.11.2024 | 3.0 | 73.0 |\n| 15.12.2024 | 3.0 | 70.0 |\n| 14.01.2025 | 3.0 | 67.0 |\n| 13.02.2025 | 3.0 | 64.0 |\n| 15.03.2025 | 3.0 | 61.0 |\n| 14.04.2025 | 3.0 | 58.0 |\n| 14.05.2025 | 3.0 | 55.0 |\n| 13.06.2025 | 3.0 | 52.0 |\n| 13.07.2025 | 3.0 | 49.0 |\n| 12.08.2025 | 3.0 | 46.0 |\n| 11.09.2025 | 3.0 | 43.0 |\n| 11.10.2025 | 3.0 | 40.0 |\n| 10.11.2025 | 3.0 | 37.0 |\n| 10.12.2025 | 3.0 | 34.0 |\n| 09.01.2026 | 3.0 | 31.0 |\n| 08.02.2026 | 3.0 | 28.0 |\n| 10.03.2026 | 3.0 | 25.0 |\n| 09.04.2026 | 3.0 | 22.0 |\n| 09.05.2026 | 3.0 | 19.0 |\n| 08.06.2026 | 3.0 | 16.0 |\n| 08.07.2026 | 3.0 | 13.0 |\n| 07.08.2026 | 3.0 | 10.0 |\n| 06.09.2026 | 3.0 | 7.0 |\n| 06.10.2026 | 3.0 | 4.0 |\n| 05.11.2026 | 4.0 | 0.0 |\n\nИсточник раскрытия: Интерфакс-ЦРКИ (e-disclosure.ru).\nТекст собран по рыночным атрибутам выпуска (сайт ЦРКИ требует CAPTCHA).",
+  "expected": {
+    "isin": "RU000A1078H1",
+    "reg_number": "4B02-03-00632-R-001P",
+    "issuer_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СОБИ-ЛИЗИНГ\"",
+    "issuer_inn": "2311127765",
+    "nominal_value": 40.0,
+    "currency": "RUB",
+    "issue_volume": 150000,
+    "placement_start_date": "2023-11-21",
+    "maturity_date": "2026-11-05",
+    "coupon_type": "FIXED",
+    "floater_formula": null,
+    "coupons": [
+      {
+        "coupon_number": 1,
+        "start_date": "2023-11-21",
+        "end_date": "2023-12-21",
+        "rate_percent": 17.5,
+        "payment_amount": 14.38
+      },
+      {
+        "coupon_number": 2,
+        "start_date": "2023-12-21",
+        "end_date": "2024-01-20",
+        "rate_percent": 17.5,
+        "payment_amount": 14.38
+      },
+      {
+        "coupon_number": 3,
+        "start_date": "2024-01-20",
+        "end_date": "2024-02-19",
+        "rate_percent": 17.5,
+        "payment_amount": 14.38
+      },
+      {
+        "coupon_number": 4,
+        "start_date": "2024-02-19",
+        "end_date": "2024-03-20",
+        "rate_percent": 17.5,
+        "payment_amount": 14.38
+      },
+      {
+        "coupon_number": 5,
+        "start_date": "2024-03-20",
+        "end_date": "2024-04-19",
+        "rate_percent": 17.5,
+        "payment_amount": 13.95
+      },
+      {
+        "coupon_number": 6,
+        "start_date": "2024-04-19",
+        "end_date": "2024-05-19",
+        "rate_percent": 17.5,
+        "payment_amount": 13.52
+      },
+      {
+        "coupon_number": 7,
+        "start_date": "2024-05-19",
+        "end_date": "2024-06-18",
+        "rate_percent": 17.5,
+        "payment_amount": 13.09
+      },
+      {
+        "coupon_number": 8,
+        "start_date": "2024-06-18",
+        "end_date": "2024-07-18",
+        "rate_percent": 17.5,
+        "payment_amount": 12.66
+      },
+      {
+        "coupon_number": 9,
+        "start_date": "2024-07-18",
+        "end_date": "2024-08-17",
+        "rate_percent": 17.5,
+        "payment_amount": 12.23
+      },
+      {
+        "coupon_number": 10,
+        "start_date": "2024-08-17",
+        "end_date": "2024-09-16",
+        "rate_percent": 17.5,
+        "payment_amount": 11.79
+      },
+      {
+        "coupon_number": 11,
+        "start_date": "2024-09-16",
+        "end_date": "2024-10-16",
+        "rate_percent": 17.5,
+        "payment_amount": 11.36
+      },
+      {
+        "coupon_number": 12,
+        "start_date": "2024-10-16",
+        "end_date": "2024-11-15",
+        "rate_percent": 17.5,
+        "payment_amount": 10.93
+      }
+    ],
+    "amortization": [
+      {
+        "payment_date": "2024-03-20",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 97.0
+      },
+      {
+        "payment_date": "2024-04-19",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 94.0
+      },
+      {
+        "payment_date": "2024-05-19",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 91.0
+      },
+      {
+        "payment_date": "2024-06-18",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 88.0
+      },
+      {
+        "payment_date": "2024-07-18",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 85.0
+      },
+      {
+        "payment_date": "2024-08-17",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 82.0
+      },
+      {
+        "payment_date": "2024-09-16",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 79.0
+      },
+      {
+        "payment_date": "2024-10-16",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 76.0
+      },
+      {
+        "payment_date": "2024-11-15",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 73.0
+      },
+      {
+        "payment_date": "2024-12-15",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 70.0
+      },
+      {
+        "payment_date": "2025-01-14",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 67.0
+      },
+      {
+        "payment_date": "2025-02-13",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 64.0
+      },
+      {
+        "payment_date": "2025-03-15",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 61.0
+      },
+      {
+        "payment_date": "2025-04-14",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 58.0
+      },
+      {
+        "payment_date": "2025-05-14",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 55.0
+      },
+      {
+        "payment_date": "2025-06-13",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 52.0
+      },
+      {
+        "payment_date": "2025-07-13",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 49.0
+      },
+      {
+        "payment_date": "2025-08-12",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 46.0
+      },
+      {
+        "payment_date": "2025-09-11",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 43.0
+      },
+      {
+        "payment_date": "2025-10-11",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 40.0
+      },
+      {
+        "payment_date": "2025-11-10",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 37.0
+      },
+      {
+        "payment_date": "2025-12-10",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 34.0
+      },
+      {
+        "payment_date": "2026-01-09",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 31.0
+      },
+      {
+        "payment_date": "2026-02-08",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 28.0
+      },
+      {
+        "payment_date": "2026-03-10",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 25.0
+      },
+      {
+        "payment_date": "2026-04-09",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 22.0
+      },
+      {
+        "payment_date": "2026-05-09",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 19.0
+      },
+      {
+        "payment_date": "2026-06-08",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 16.0
+      },
+      {
+        "payment_date": "2026-07-08",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 13.0
+      },
+      {
+        "payment_date": "2026-08-07",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 10.0
+      },
+      {
+        "payment_date": "2026-09-06",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 7.0
+      },
+      {
+        "payment_date": "2026-10-06",
+        "amortization_percent": 3.0,
+        "residual_nominal_percent": 4.0
+      },
+      {
+        "payment_date": "2026-11-05",
+        "amortization_percent": 4.0,
+        "residual_nominal_percent": 0.0
+      }
+    ],
+    "quotes": {
+      "reg_number": "Государственный регистрационный номер выпуска: 4B02-03-00632-R-001P",
+      "issuer_inn": "ИНН: 2311127765",
+      "nominal_value": "Номинальная стоимость: 40.0"
+    }
+  },
+  "critical_fields": [
+    "reg_number",
+    "isin",
+    "issuer_inn",
+    "nominal_value",
+    "currency",
+    "maturity_date",
+    "coupon_type",
+    "coupons_count",
+    "amortization_sum"
+  ]
+}

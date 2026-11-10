@@ -1,0 +1,133 @@
+{
+  "id": "cbr_ru000a107e81",
+  "title": "ЦБ: БинФарм1P3",
+  "source": "cbr",
+  "tags": [
+    "cbr",
+    "floater"
+  ],
+  "input_markdown": "БАНК РОССИИ\nСведения из реестра эмиссионных ценных бумаг\n\nПолное наименование эмитента: ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БИННОФАРМ ГРУПП\"\nИНН эмитента: 9704005675\nГосударственный регистрационный номер выпуска: 4B02-03-00054-L-001P\nISIN: RU000A107E81\nВалюта номинала ценной бумаги: российский рубль (RUB)\nНоминальная стоимость одной ценной бумаги: 1 000,00 руб.\nКоличество ценных бумаг в выпуске: 3000000 шт.\nДата начала размещения: 18.12.2023\nДата погашения: 14.12.2026\n\nПорядок определения процентной ставки:\nИндикатор: RUONIA.\nСпред составляет 2.4 процента годовых.\nФормула: Ставка RUONIA.\nКупонный доход является плавающим (флоатер).\n\n| № купонного периода | Дата начала | Дата окончания (выплаты) | Ставка, % годовых | Размер выплаты, руб. |\n| --- | --- | --- | --- | --- |\n| 1 | 18.12.2023 | 18.03.2024 |  | 44.89 |\n| 2 | 18.03.2024 | 17.06.2024 |  | 45.9 |\n| 3 | 17.06.2024 | 16.09.2024 |  | 48.25 |\n| 4 | 16.09.2024 | 16.12.2024 |  | 54.67 |\n| 5 | 16.12.2024 | 17.03.2025 |  | 58.13 |\n| 6 | 17.03.2025 | 16.06.2025 |  | 58.4 |\n| 7 | 16.06.2025 | 15.09.2025 |  | 52.76 |\n| 8 | 15.09.2025 | 15.12.2025 |  | 47.25 |\n| 9 | 15.12.2025 | 16.03.2026 |  | 44.94 |\n| 10 | 16.03.2026 | 15.06.2026 |  | 42.1 |\n| 11 | 15.06.2026 | 14.09.2026 |  | 40.96 |\n| 12 | 14.09.2026 | 14.12.2026 |  |  |",
+  "expected": {
+    "isin": "RU000A107E81",
+    "reg_number": "4B02-03-00054-L-001P",
+    "issuer_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БИННОФАРМ ГРУПП\"",
+    "issuer_inn": "9704005675",
+    "nominal_value": 1000.0,
+    "currency": "RUB",
+    "issue_volume": 3000000,
+    "placement_start_date": "2023-12-18",
+    "maturity_date": "2026-12-14",
+    "coupon_type": "FLOATER",
+    "floater_formula": {
+      "benchmark": "RUONIA",
+      "spread_percent": 2.4,
+      "observation_shift_days": 5,
+      "averaging_type": "POINT_IN_TIME",
+      "raw_formula_text": "Ставка RUONIA"
+    },
+    "coupons": [
+      {
+        "coupon_number": 1,
+        "start_date": "2023-12-18",
+        "end_date": "2024-03-18",
+        "rate_percent": null,
+        "payment_amount": 44.89
+      },
+      {
+        "coupon_number": 2,
+        "start_date": "2024-03-18",
+        "end_date": "2024-06-17",
+        "rate_percent": null,
+        "payment_amount": 45.9
+      },
+      {
+        "coupon_number": 3,
+        "start_date": "2024-06-17",
+        "end_date": "2024-09-16",
+        "rate_percent": null,
+        "payment_amount": 48.25
+      },
+      {
+        "coupon_number": 4,
+        "start_date": "2024-09-16",
+        "end_date": "2024-12-16",
+        "rate_percent": null,
+        "payment_amount": 54.67
+      },
+      {
+        "coupon_number": 5,
+        "start_date": "2024-12-16",
+        "end_date": "2025-03-17",
+        "rate_percent": null,
+        "payment_amount": 58.13
+      },
+      {
+        "coupon_number": 6,
+        "start_date": "2025-03-17",
+        "end_date": "2025-06-16",
+        "rate_percent": null,
+        "payment_amount": 58.4
+      },
+      {
+        "coupon_number": 7,
+        "start_date": "2025-06-16",
+        "end_date": "2025-09-15",
+        "rate_percent": null,
+        "payment_amount": 52.76
+      },
+      {
+        "coupon_number": 8,
+        "start_date": "2025-09-15",
+        "end_date": "2025-12-15",
+        "rate_percent": null,
+        "payment_amount": 47.25
+      },
+      {
+        "coupon_number": 9,
+        "start_date": "2025-12-15",
+        "end_date": "2026-03-16",
+        "rate_percent": null,
+        "payment_amount": 44.94
+      },
+      {
+        "coupon_number": 10,
+        "start_date": "2026-03-16",
+        "end_date": "2026-06-15",
+        "rate_percent": null,
+        "payment_amount": 42.1
+      },
+      {
+        "coupon_number": 11,
+        "start_date": "2026-06-15",
+        "end_date": "2026-09-14",
+        "rate_percent": null,
+        "payment_amount": 40.96
+      },
+      {
+        "coupon_number": 12,
+        "start_date": "2026-09-14",
+        "end_date": "2026-12-14",
+        "rate_percent": null,
+        "payment_amount": null
+      }
+    ],
+    "amortization": [],
+    "quotes": {
+      "reg_number": "Государственный регистрационный номер выпуска: 4B02-03-00054-L-001P",
+      "issuer_inn": "ИНН: 9704005675",
+      "nominal_value": "Номинальная стоимость: 1000.0"
+    }
+  },
+  "critical_fields": [
+    "reg_number",
+    "isin",
+    "issuer_inn",
+    "nominal_value",
+    "currency",
+    "maturity_date",
+    "coupon_type",
+    "coupons_count",
+    "benchmark",
+    "spread_percent"
+  ]
+}

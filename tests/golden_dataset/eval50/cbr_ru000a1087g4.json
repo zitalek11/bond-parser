@@ -1,0 +1,185 @@
+{
+  "id": "cbr_ru000a1087g4",
+  "title": "ЦБ: ПСБ Фин2Р1",
+  "source": "cbr",
+  "tags": [
+    "cbr",
+    "floater"
+  ],
+  "input_markdown": "БАНК РОССИИ\nСведения из реестра эмиссионных ценных бумаг\n\nПолное наименование эмитента: ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ МИКРОФИНАНСОВАЯ КОМПАНИЯ \"ПСБ ФИНАНС\"\nИНН эмитента: 7730634468\nГосударственный регистрационный номер выпуска: 4B02-01-00321-R-002P\nISIN: RU000A1087G4\nВалюта номинала ценной бумаги: российский рубль (RUB)\nНоминальная стоимость одной ценной бумаги: 200,00 руб.\nКоличество ценных бумаг в выпуске: 500000 шт.\nДата начала размещения: 09.04.2024\nДата погашения: 25.03.2027\n\nПорядок определения процентной ставки:\nИндикатор: KEY_RATE_CBR.\nСпред составляет 4.0 процента годовых.\nФормула: Ключевая ставка.\nКупонный доход является плавающим (флоатер).\n\n| № купонного периода | Дата начала | Дата окончания (выплаты) | Ставка, % годовых | Размер выплаты, руб. |\n| --- | --- | --- | --- | --- |\n| 1 | 09.04.2024 | 09.05.2024 | 20.0 | 16.44 |\n| 2 | 09.05.2024 | 08.06.2024 | 20.0 | 16.44 |\n| 3 | 08.06.2024 | 08.07.2024 | 20.0 | 16.44 |\n| 4 | 08.07.2024 | 07.08.2024 | 20.0 | 16.44 |\n| 5 | 07.08.2024 | 06.09.2024 | 22.0 | 18.08 |\n| 6 | 06.09.2024 | 06.10.2024 | 22.0 | 18.08 |\n| 7 | 06.10.2024 | 05.11.2024 | 23.0 | 18.9 |\n| 8 | 05.11.2024 | 05.12.2024 | 25.0 | 20.55 |\n| 9 | 05.12.2024 | 04.01.2025 | 25.0 | 20.55 |\n| 10 | 04.01.2025 | 03.02.2025 | 25.0 | 18.49 |\n| 11 | 03.02.2025 | 05.03.2025 | 25.0 | 18.49 |\n| 12 | 05.03.2025 | 04.04.2025 | 25.0 | 18.49 |\n\n## Порядок и условия погашения\nПогашение номинальной стоимости осуществляется частично (амортизация):\n\n| Дата | Процент погашения от номинала | Остаток номинала, % |\n| --- | --- | --- |\n| 04.01.2025 | 10.0 | 90.0 |\n| 04.04.2025 | 10.0 | 80.0 |\n| 03.07.2025 | 10.0 | 70.0 |\n| 01.10.2025 | 10.0 | 60.0 |\n| 30.12.2025 | 10.0 | 50.0 |\n| 30.03.2026 | 10.0 | 40.0 |\n| 28.06.2026 | 10.0 | 30.0 |\n| 26.09.2026 | 10.0 | 20.0 |\n| 25.12.2026 | 10.0 | 10.0 |\n| 25.03.2027 | 10.0 | 0.0 |",
+  "expected": {
+    "isin": "RU000A1087G4",
+    "reg_number": "4B02-01-00321-R-002P",
+    "issuer_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ МИКРОФИНАНСОВАЯ КОМПАНИЯ \"ПСБ ФИНАНС\"",
+    "issuer_inn": "7730634468",
+    "nominal_value": 200.0,
+    "currency": "RUB",
+    "issue_volume": 500000,
+    "placement_start_date": "2024-04-09",
+    "maturity_date": "2027-03-25",
+    "coupon_type": "FLOATER",
+    "floater_formula": {
+      "benchmark": "KEY_RATE_CBR",
+      "spread_percent": 4.0,
+      "observation_shift_days": 5,
+      "averaging_type": "POINT_IN_TIME",
+      "raw_formula_text": "Ключевая ставка"
+    },
+    "coupons": [
+      {
+        "coupon_number": 1,
+        "start_date": "2024-04-09",
+        "end_date": "2024-05-09",
+        "rate_percent": 20.0,
+        "payment_amount": 16.44
+      },
+      {
+        "coupon_number": 2,
+        "start_date": "2024-05-09",
+        "end_date": "2024-06-08",
+        "rate_percent": 20.0,
+        "payment_amount": 16.44
+      },
+      {
+        "coupon_number": 3,
+        "start_date": "2024-06-08",
+        "end_date": "2024-07-08",
+        "rate_percent": 20.0,
+        "payment_amount": 16.44
+      },
+      {
+        "coupon_number": 4,
+        "start_date": "2024-07-08",
+        "end_date": "2024-08-07",
+        "rate_percent": 20.0,
+        "payment_amount": 16.44
+      },
+      {
+        "coupon_number": 5,
+        "start_date": "2024-08-07",
+        "end_date": "2024-09-06",
+        "rate_percent": 22.0,
+        "payment_amount": 18.08
+      },
+      {
+        "coupon_number": 6,
+        "start_date": "2024-09-06",
+        "end_date": "2024-10-06",
+        "rate_percent": 22.0,
+        "payment_amount": 18.08
+      },
+      {
+        "coupon_number": 7,
+        "start_date": "2024-10-06",
+        "end_date": "2024-11-05",
+        "rate_percent": 23.0,
+        "payment_amount": 18.9
+      },
+      {
+        "coupon_number": 8,
+        "start_date": "2024-11-05",
+        "end_date": "2024-12-05",
+        "rate_percent": 25.0,
+        "payment_amount": 20.55
+      },
+      {
+        "coupon_number": 9,
+        "start_date": "2024-12-05",
+        "end_date": "2025-01-04",
+        "rate_percent": 25.0,
+        "payment_amount": 20.55
+      },
+      {
+        "coupon_number": 10,
+        "start_date": "2025-01-04",
+        "end_date": "2025-02-03",
+        "rate_percent": 25.0,
+        "payment_amount": 18.49
+      },
+      {
+        "coupon_number": 11,
+        "start_date": "2025-02-03",
+        "end_date": "2025-03-05",
+        "rate_percent": 25.0,
+        "payment_amount": 18.49
+      },
+      {
+        "coupon_number": 12,
+        "start_date": "2025-03-05",
+        "end_date": "2025-04-04",
+        "rate_percent": 25.0,
+        "payment_amount": 18.49
+      }
+    ],
+    "amortization": [
+      {
+        "payment_date": "2025-01-04",
+        "amortization_percent": 10.0,
+        "residual_nominal_percent": 90.0
+      },
+      {
+        "payment_date": "2025-04-04",
+        "amortization_percent": 10.0,
+        "residual_nominal_percent": 80.0
+      },
+      {
+        "payment_date": "2025-07-03",
+        "amortization_percent": 10.0,
+        "residual_nominal_percent": 70.0
+      },
+      {
+        "payment_date": "2025-10-01",
+        "amortization_percent": 10.0,
+        "residual_nominal_percent": 60.0
+      },
+      {
+        "payment_date": "2025-12-30",
+        "amortization_percent": 10.0,
+        "residual_nominal_percent": 50.0
+      },
+      {
+        "payment_date": "2026-03-30",
+        "amortization_percent": 10.0,
+        "residual_nominal_percent": 40.0
+      },
+      {
+        "payment_date": "2026-06-28",
+        "amortization_percent": 10.0,
+        "residual_nominal_percent": 30.0
+      },
+      {
+        "payment_date": "2026-09-26",
+        "amortization_percent": 10.0,
+        "residual_nominal_percent": 20.0
+      },
+      {
+        "payment_date": "2026-12-25",
+        "amortization_percent": 10.0,
+        "residual_nominal_percent": 10.0
+      },
+      {
+        "payment_date": "2027-03-25",
+        "amortization_percent": 10.0,
+        "residual_nominal_percent": 0.0
+      }
+    ],
+    "quotes": {
+      "reg_number": "Государственный регистрационный номер выпуска: 4B02-01-00321-R-002P",
+      "issuer_inn": "ИНН: 7730634468",
+      "nominal_value": "Номинальная стоимость: 200.0"
+    }
+  },
+  "critical_fields": [
+    "reg_number",
+    "isin",
+    "issuer_inn",
+    "nominal_value",
+    "currency",
+    "maturity_date",
+    "coupon_type",
+    "coupons_count",
+    "benchmark",
+    "spread_percent",
+    "amortization_sum"
+  ]
+}

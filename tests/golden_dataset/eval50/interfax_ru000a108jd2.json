@@ -1,0 +1,125 @@
+{
+  "id": "interfax_ru000a108jd2",
+  "title": "ЦРКИ: АВТОБФ БП6",
+  "source": "interfax_crki",
+  "tags": [
+    "interfax_crki",
+    "fixed"
+  ],
+  "input_markdown": "Сообщение о существенном факте\nИнтерфакс — Центр раскрытия корпоративной информации\n\nЭмитент: АКЦИОНЕРНОЕ ОБЩЕСТВО \"АВТОБАН-ФИНАНС\"\nИНН: 7708813750\nВид ценных бумаг: биржевые облигации\nГосударственный регистрационный номер выпуска: 4B02-06-82416-H-001P\nISIN код: RU000A108JD2\n\n## Сведения о размещаемых ценных бумагах\nНоминальная стоимость одной биржевой облигации составляет 1000 (1 000,00) рублей.\nВалюта номинала: российский рубль (RUB).\nКоличество ценных бумаг выпуска: 5000000 (штук).\nДата начала размещения: 24.06.2024\nДата погашения: 17.06.2030\n\n## Срок и порядок выплаты купонного дохода\nКупонный доход является фиксированным.\nСтавка купона составляет 15,00 процента годовых.\n\n| № купонного периода | Дата начала | Дата окончания (выплаты) | Ставка, % годовых | Размер выплаты, руб. |\n| --- | --- | --- | --- | --- |\n| 1 | 24.06.2024 | 23.12.2024 | 15.0 | 74.79 |\n| 2 | 23.12.2024 | 23.06.2025 | 15.0 | 74.79 |\n| 3 | 23.06.2025 | 22.12.2025 | 15.0 | 74.79 |\n| 4 | 22.12.2025 | 22.06.2026 | 15.0 | 74.79 |\n| 5 | 22.06.2026 | 21.12.2026 | 15.0 | 74.79 |\n| 6 | 21.12.2026 | 21.06.2027 | 15.0 | 74.79 |\n| 7 | 21.06.2027 | 20.12.2027 |  |  |\n| 8 | 20.12.2027 | 19.06.2028 |  |  |\n| 9 | 19.06.2028 | 18.12.2028 |  |  |\n| 10 | 18.12.2028 | 18.06.2029 |  |  |\n| 11 | 18.06.2029 | 17.12.2029 |  |  |\n| 12 | 17.12.2029 | 17.06.2030 |  |  |\n\nИсточник раскрытия: Интерфакс-ЦРКИ (e-disclosure.ru).\nТекст собран по рыночным атрибутам выпуска (сайт ЦРКИ требует CAPTCHA).",
+  "expected": {
+    "isin": "RU000A108JD2",
+    "reg_number": "4B02-06-82416-H-001P",
+    "issuer_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"АВТОБАН-ФИНАНС\"",
+    "issuer_inn": "7708813750",
+    "nominal_value": 1000.0,
+    "currency": "RUB",
+    "issue_volume": 5000000,
+    "placement_start_date": "2024-06-24",
+    "maturity_date": "2030-06-17",
+    "coupon_type": "FIXED",
+    "floater_formula": null,
+    "coupons": [
+      {
+        "coupon_number": 1,
+        "start_date": "2024-06-24",
+        "end_date": "2024-12-23",
+        "rate_percent": 15.0,
+        "payment_amount": 74.79
+      },
+      {
+        "coupon_number": 2,
+        "start_date": "2024-12-23",
+        "end_date": "2025-06-23",
+        "rate_percent": 15.0,
+        "payment_amount": 74.79
+      },
+      {
+        "coupon_number": 3,
+        "start_date": "2025-06-23",
+        "end_date": "2025-12-22",
+        "rate_percent": 15.0,
+        "payment_amount": 74.79
+      },
+      {
+        "coupon_number": 4,
+        "start_date": "2025-12-22",
+        "end_date": "2026-06-22",
+        "rate_percent": 15.0,
+        "payment_amount": 74.79
+      },
+      {
+        "coupon_number": 5,
+        "start_date": "2026-06-22",
+        "end_date": "2026-12-21",
+        "rate_percent": 15.0,
+        "payment_amount": 74.79
+      },
+      {
+        "coupon_number": 6,
+        "start_date": "2026-12-21",
+        "end_date": "2027-06-21",
+        "rate_percent": 15.0,
+        "payment_amount": 74.79
+      },
+      {
+        "coupon_number": 7,
+        "start_date": "2027-06-21",
+        "end_date": "2027-12-20",
+        "rate_percent": null,
+        "payment_amount": null
+      },
+      {
+        "coupon_number": 8,
+        "start_date": "2027-12-20",
+        "end_date": "2028-06-19",
+        "rate_percent": null,
+        "payment_amount": null
+      },
+      {
+        "coupon_number": 9,
+        "start_date": "2028-06-19",
+        "end_date": "2028-12-18",
+        "rate_percent": null,
+        "payment_amount": null
+      },
+      {
+        "coupon_number": 10,
+        "start_date": "2028-12-18",
+        "end_date": "2029-06-18",
+        "rate_percent": null,
+        "payment_amount": null
+      },
+      {
+        "coupon_number": 11,
+        "start_date": "2029-06-18",
+        "end_date": "2029-12-17",
+        "rate_percent": null,
+        "payment_amount": null
+      },
+      {
+        "coupon_number": 12,
+        "start_date": "2029-12-17",
+        "end_date": "2030-06-17",
+        "rate_percent": null,
+        "payment_amount": null
+      }
+    ],
+    "amortization": [],
+    "quotes": {
+      "reg_number": "Государственный регистрационный номер выпуска: 4B02-06-82416-H-001P",
+      "issuer_inn": "ИНН: 7708813750",
+      "nominal_value": "Номинальная стоимость: 1000.0"
+    }
+  },
+  "critical_fields": [
+    "reg_number",
+    "isin",
+    "issuer_inn",
+    "nominal_value",
+    "currency",
+    "maturity_date",
+    "coupon_type",
+    "coupons_count"
+  ]
+}

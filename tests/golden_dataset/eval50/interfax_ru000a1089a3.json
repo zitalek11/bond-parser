@@ -1,0 +1,217 @@
+{
+  "id": "interfax_ru000a1089a3",
+  "title": "ЦРКИ: АСпэйс 1Р1",
+  "source": "interfax_crki",
+  "tags": [
+    "interfax_crki",
+    "fixed"
+  ],
+  "input_markdown": "Сообщение о существенном факте\nИнтерфакс — Центр раскрытия корпоративной информации\n\nЭмитент: АКЦИОНЕРНОЕ ОБЩЕСТВО \"А СПЭЙС\"\nИНН: 9702082272\nВид ценных бумаг: биржевые облигации\nГосударственный регистрационный номер выпуска: 4B02-01-00144-L-001P\nISIN код: RU000A1089A3\n\n## Сведения о размещаемых ценных бумагах\nНоминальная стоимость одной биржевой облигации составляет 611 (611,50) рублей.\nВалюта номинала: российский рубль (RUB).\nКоличество ценных бумаг выпуска: 200000 (штук).\nДата начала размещения: 11.04.2024\nДата погашения: 23.09.2027\n\n## Срок и порядок выплаты купонного дохода\nКупонный доход является фиксированным.\nСтавка купона составляет 21,00 процента годовых.\n\n| № купонного периода | Дата начала | Дата окончания (выплаты) | Ставка, % годовых | Размер выплаты, руб. |\n| --- | --- | --- | --- | --- |\n| 1 | 11.04.2024 | 11.05.2024 | 21.0 | 17.26 |\n| 2 | 11.05.2024 | 10.06.2024 | 21.0 | 17.26 |\n| 3 | 10.06.2024 | 10.07.2024 | 21.0 | 17.26 |\n| 4 | 10.07.2024 | 09.08.2024 | 21.0 | 17.26 |\n| 5 | 09.08.2024 | 08.09.2024 | 21.0 | 17.26 |\n| 6 | 08.09.2024 | 08.10.2024 | 21.0 | 17.26 |\n| 7 | 08.10.2024 | 07.11.2024 | 21.0 | 17.26 |\n| 8 | 07.11.2024 | 07.12.2024 | 21.0 | 17.26 |\n| 9 | 07.12.2024 | 06.01.2025 | 21.0 | 17.26 |\n| 10 | 06.01.2025 | 05.02.2025 | 21.0 | 17.26 |\n| 11 | 05.02.2025 | 07.03.2025 | 21.0 | 17.26 |\n| 12 | 07.03.2025 | 06.04.2025 | 21.0 | 17.26 |\n\n## Порядок и условия погашения\nПогашение номинальной стоимости осуществляется частично (амортизация):\n\n| Дата | Процент погашения от номинала | Остаток номинала, % |\n| --- | --- | --- |\n| 01.05.2026 | 5.55 | 94.45 |\n| 31.05.2026 | 5.55 | 88.9 |\n| 30.06.2026 | 5.55 | 83.35 |\n| 30.07.2026 | 5.55 | 77.8 |\n| 29.08.2026 | 5.55 | 72.25 |\n| 28.09.2026 | 5.55 | 66.7 |\n| 28.10.2026 | 5.55 | 61.15 |\n| 27.11.2026 | 5.55 | 55.6 |\n| 27.12.2026 | 5.55 | 50.05 |\n| 26.01.2027 | 5.55 | 44.5 |\n| 25.02.2027 | 5.55 | 38.95 |\n| 27.03.2027 | 5.55 | 33.4 |\n| 26.04.2027 | 5.55 | 27.85 |\n| 26.05.2027 | 5.55 | 22.3 |\n| 25.06.2027 | 5.55 | 16.75 |\n| 25.07.2027 | 5.55 | 11.2 |\n| 24.08.2027 | 5.55 | 5.65 |\n| 23.09.2027 | 5.65 | 0.0 |\n\nИсточник раскрытия: Интерфакс-ЦРКИ (e-disclosure.ru).\nТекст собран по рыночным атрибутам выпуска (сайт ЦРКИ требует CAPTCHA).",
+  "expected": {
+    "isin": "RU000A1089A3",
+    "reg_number": "4B02-01-00144-L-001P",
+    "issuer_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"А СПЭЙС\"",
+    "issuer_inn": "9702082272",
+    "nominal_value": 611.5,
+    "currency": "RUB",
+    "issue_volume": 200000,
+    "placement_start_date": "2024-04-11",
+    "maturity_date": "2027-09-23",
+    "coupon_type": "FIXED",
+    "floater_formula": null,
+    "coupons": [
+      {
+        "coupon_number": 1,
+        "start_date": "2024-04-11",
+        "end_date": "2024-05-11",
+        "rate_percent": 21.0,
+        "payment_amount": 17.26
+      },
+      {
+        "coupon_number": 2,
+        "start_date": "2024-05-11",
+        "end_date": "2024-06-10",
+        "rate_percent": 21.0,
+        "payment_amount": 17.26
+      },
+      {
+        "coupon_number": 3,
+        "start_date": "2024-06-10",
+        "end_date": "2024-07-10",
+        "rate_percent": 21.0,
+        "payment_amount": 17.26
+      },
+      {
+        "coupon_number": 4,
+        "start_date": "2024-07-10",
+        "end_date": "2024-08-09",
+        "rate_percent": 21.0,
+        "payment_amount": 17.26
+      },
+      {
+        "coupon_number": 5,
+        "start_date": "2024-08-09",
+        "end_date": "2024-09-08",
+        "rate_percent": 21.0,
+        "payment_amount": 17.26
+      },
+      {
+        "coupon_number": 6,
+        "start_date": "2024-09-08",
+        "end_date": "2024-10-08",
+        "rate_percent": 21.0,
+        "payment_amount": 17.26
+      },
+      {
+        "coupon_number": 7,
+        "start_date": "2024-10-08",
+        "end_date": "2024-11-07",
+        "rate_percent": 21.0,
+        "payment_amount": 17.26
+      },
+      {
+        "coupon_number": 8,
+        "start_date": "2024-11-07",
+        "end_date": "2024-12-07",
+        "rate_percent": 21.0,
+        "payment_amount": 17.26
+      },
+      {
+        "coupon_number": 9,
+        "start_date": "2024-12-07",
+        "end_date": "2025-01-06",
+        "rate_percent": 21.0,
+        "payment_amount": 17.26
+      },
+      {
+        "coupon_number": 10,
+        "start_date": "2025-01-06",
+        "end_date": "2025-02-05",
+        "rate_percent": 21.0,
+        "payment_amount": 17.26
+      },
+      {
+        "coupon_number": 11,
+        "start_date": "2025-02-05",
+        "end_date": "2025-03-07",
+        "rate_percent": 21.0,
+        "payment_amount": 17.26
+      },
+      {
+        "coupon_number": 12,
+        "start_date": "2025-03-07",
+        "end_date": "2025-04-06",
+        "rate_percent": 21.0,
+        "payment_amount": 17.26
+      }
+    ],
+    "amortization": [
+      {
+        "payment_date": "2026-05-01",
+        "amortization_percent": 5.55,
+        "residual_nominal_percent": 94.45
+      },
+      {
+        "payment_date": "2026-05-31",
+        "amortization_percent": 5.55,
+        "residual_nominal_percent": 88.9
+      },
+      {
+        "payment_date": "2026-06-30",
+        "amortization_percent": 5.55,
+        "residual_nominal_percent": 83.35
+      },
+      {
+        "payment_date": "2026-07-30",
+        "amortization_percent": 5.55,
+        "residual_nominal_percent": 77.8
+      },
+      {
+        "payment_date": "2026-08-29",
+        "amortization_percent": 5.55,
+        "residual_nominal_percent": 72.25
+      },
+      {
+        "payment_date": "2026-09-28",
+        "amortization_percent": 5.55,
+        "residual_nominal_percent": 66.7
+      },
+      {
+        "payment_date": "2026-10-28",
+        "amortization_percent": 5.55,
+        "residual_nominal_percent": 61.15
+      },
+      {
+        "payment_date": "2026-11-27",
+        "amortization_percent": 5.55,
+        "residual_nominal_percent": 55.6
+      },
+      {
+        "payment_date": "2026-12-27",
+        "amortization_percent": 5.55,
+        "residual_nominal_percent": 50.05
+      },
+      {
+        "payment_date": "2027-01-26",
+        "amortization_percent": 5.55,
+        "residual_nominal_percent": 44.5
+      },
+      {
+        "payment_date": "2027-02-25",
+        "amortization_percent": 5.55,
+        "residual_nominal_percent": 38.95
+      },
+      {
+        "payment_date": "2027-03-27",
+        "amortization_percent": 5.55,
+        "residual_nominal_percent": 33.4
+      },
+      {
+        "payment_date": "2027-04-26",
+        "amortization_percent": 5.55,
+        "residual_nominal_percent": 27.85
+      },
+      {
+        "payment_date": "2027-05-26",
+        "amortization_percent": 5.55,
+        "residual_nominal_percent": 22.3
+      },
+      {
+        "payment_date": "2027-06-25",
+        "amortization_percent": 5.55,
+        "residual_nominal_percent": 16.75
+      },
+      {
+        "payment_date": "2027-07-25",
+        "amortization_percent": 5.55,
+        "residual_nominal_percent": 11.2
+      },
+      {
+        "payment_date": "2027-08-24",
+        "amortization_percent": 5.55,
+        "residual_nominal_percent": 5.65
+      },
+      {
+        "payment_date": "2027-09-23",
+        "amortization_percent": 5.65,
+        "residual_nominal_percent": 0.0
+      }
+    ],
+    "quotes": {
+      "reg_number": "Государственный регистрационный номер выпуска: 4B02-01-00144-L-001P",
+      "issuer_inn": "ИНН: 9702082272",
+      "nominal_value": "Номинальная стоимость: 611.5"
+    }
+  },
+  "critical_fields": [
+    "reg_number",
+    "isin",
+    "issuer_inn",
+    "nominal_value",
+    "currency",
+    "maturity_date",
+    "coupon_type",
+    "coupons_count",
+    "amortization_sum"
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "id": "cbr_ru000a107wf2",
+  "title": "ЦБ: ПИР 1P1",
+  "source": "cbr",
+  "tags": [
+    "cbr",
+    "fixed"
+  ],
+  "input_markdown": "БАНК РОССИИ\nСведения из реестра эмиссионных ценных бумаг\n\nПолное наименование эмитента: ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПАРТНЕРСТВО, ИНВЕСТИЦИИ, РАЗВИТИЕ\"\nИНН эмитента: 7841422483\nГосударственный регистрационный номер выпуска: 4B02-01-00135-L-001P\nISIN: RU000A107WF2\nВалюта номинала ценной бумаги: российский рубль (RUB)\nНоминальная стоимость одной ценной бумаги: 250,00 руб.\nКоличество ценных бумаг в выпуске: 150000 шт.\nДата начала размещения: 05.03.2024\nДата погашения: 18.02.2027\n\nКупонный доход является фиксированным.\nСтавка купона: 18,50 процента годовых.\n\n| № купонного периода | Дата начала | Дата окончания (выплаты) | Ставка, % годовых | Размер выплаты, руб. |\n| --- | --- | --- | --- | --- |\n| 1 | 05.03.2024 | 04.04.2024 | 18.5 | 15.21 |\n| 2 | 04.04.2024 | 04.05.2024 | 18.5 | 15.21 |\n| 3 | 04.05.2024 | 03.06.2024 | 18.5 | 15.21 |\n| 4 | 03.06.2024 | 03.07.2024 | 18.5 | 15.21 |\n| 5 | 03.07.2024 | 02.08.2024 | 18.5 | 15.21 |\n| 6 | 02.08.2024 | 01.09.2024 | 18.5 | 15.21 |\n| 7 | 01.09.2024 | 01.10.2024 | 18.5 | 15.21 |\n| 8 | 01.10.2024 | 31.10.2024 | 18.5 | 15.21 |\n| 9 | 31.10.2024 | 30.11.2024 | 18.5 | 15.21 |\n| 10 | 30.11.2024 | 30.12.2024 | 18.5 | 15.21 |\n| 11 | 30.12.2024 | 29.01.2025 | 18.5 | 15.21 |\n| 12 | 29.01.2025 | 28.02.2025 | 18.5 | 15.21 |\n\n## Порядок и условия погашения\nПогашение номинальной стоимости осуществляется частично (амортизация):\n\n| Дата | Процент погашения от номинала | Остаток номинала, % |\n| --- | --- | --- |\n| 29.05.2025 | 12.5 | 87.5 |\n| 27.08.2025 | 12.5 | 75.0 |\n| 25.11.2025 | 12.5 | 62.5 |\n| 23.02.2026 | 12.5 | 50.0 |\n| 24.05.2026 | 12.5 | 37.5 |\n| 22.08.2026 | 12.5 | 25.0 |\n| 20.11.2026 | 12.5 | 12.5 |\n| 18.02.2027 | 12.5 | 0.0 |",
+  "expected": {
+    "isin": "RU000A107WF2",
+    "reg_number": "4B02-01-00135-L-001P",
+    "issuer_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПАРТНЕРСТВО, ИНВЕСТИЦИИ, РАЗВИТИЕ\"",
+    "issuer_inn": "7841422483",
+    "nominal_value": 250.0,
+    "currency": "RUB",
+    "issue_volume": 150000,
+    "placement_start_date": "2024-03-05",
+    "maturity_date": "2027-02-18",
+    "coupon_type": "FIXED",
+    "floater_formula": null,
+    "coupons": [
+      {
+        "coupon_number": 1,
+        "start_date": "2024-03-05",
+        "end_date": "2024-04-04",
+        "rate_percent": 18.5,
+        "payment_amount": 15.21
+      },
+      {
+        "coupon_number": 2,
+        "start_date": "2024-04-04",
+        "end_date": "2024-05-04",
+        "rate_percent": 18.5,
+        "payment_amount": 15.21
+      },
+      {
+        "coupon_number": 3,
+        "start_date": "2024-05-04",
+        "end_date": "2024-06-03",
+        "rate_percent": 18.5,
+        "payment_amount": 15.21
+      },
+      {
+        "coupon_number": 4,
+        "start_date": "2024-06-03",
+        "end_date": "2024-07-03",
+        "rate_percent": 18.5,
+        "payment_amount": 15.21
+      },
+      {
+        "coupon_number": 5,
+        "start_date": "2024-07-03",
+        "end_date": "2024-08-02",
+        "rate_percent": 18.5,
+        "payment_amount": 15.21
+      },
+      {
+        "coupon_number": 6,
+        "start_date": "2024-08-02",
+        "end_date": "2024-09-01",
+        "rate_percent": 18.5,
+        "payment_amount": 15.21
+      },
+      {
+        "coupon_number": 7,
+        "start_date": "2024-09-01",
+        "end_date": "2024-10-01",
+        "rate_percent": 18.5,
+        "payment_amount": 15.21
+      },
+      {
+        "coupon_number": 8,
+        "start_date": "2024-10-01",
+        "end_date": "2024-10-31",
+        "rate_percent": 18.5,
+        "payment_amount": 15.21
+      },
+      {
+        "coupon_number": 9,
+        "start_date": "2024-10-31",
+        "end_date": "2024-11-30",
+        "rate_percent": 18.5,
+        "payment_amount": 15.21
+      },
+      {
+        "coupon_number": 10,
+        "start_date": "2024-11-30",
+        "end_date": "2024-12-30",
+        "rate_percent": 18.5,
+        "payment_amount": 15.21
+      },
+      {
+        "coupon_number": 11,
+        "start_date": "2024-12-30",
+        "end_date": "2025-01-29",
+        "rate_percent": 18.5,
+        "payment_amount": 15.21
+      },
+      {
+        "coupon_number": 12,
+        "start_date": "2025-01-29",
+        "end_date": "2025-02-28",
+        "rate_percent": 18.5,
+        "payment_amount": 15.21
+      }
+    ],
+    "amortization": [
+      {
+        "payment_date": "2025-05-29",
+        "amortization_percent": 12.5,
+        "residual_nominal_percent": 87.5
+      },
+      {
+        "payment_date": "2025-08-27",
+        "amortization_percent": 12.5,
+        "residual_nominal_percent": 75.0
+      },
+      {
+        "payment_date": "2025-11-25",
+        "amortization_percent": 12.5,
+        "residual_nominal_percent": 62.5
+      },
+      {
+        "payment_date": "2026-02-23",
+        "amortization_percent": 12.5,
+        "residual_nominal_percent": 50.0
+      },
+      {
+        "payment_date": "2026-05-24",
+        "amortization_percent": 12.5,
+        "residual_nominal_percent": 37.5
+      },
+      {
+        "payment_date": "2026-08-22",
+        "amortization_percent": 12.5,
+        "residual_nominal_percent": 25.0
+      },
+      {
+        "payment_date": "2026-11-20",
+        "amortization_percent": 12.5,
+        "residual_nominal_percent": 12.5
+      },
+      {
+        "payment_date": "2027-02-18",
+        "amortization_percent": 12.5,
+        "residual_nominal_percent": 0.0
+      }
+    ],
+    "quotes": {
+      "reg_number": "Государственный регистрационный номер выпуска: 4B02-01-00135-L-001P",
+      "issuer_inn": "ИНН: 7841422483",
+      "nominal_value": "Номинальная стоимость: 250.0"
+    }
+  },
+  "critical_fields": [
+    "reg_number",
+    "isin",
+    "issuer_inn",
+    "nominal_value",
+    "currency",
+    "maturity_date",
+    "coupon_type",
+    "coupons_count",
+    "amortization_sum"
+  ]
+}

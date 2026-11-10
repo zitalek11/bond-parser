@@ -1,0 +1,125 @@
+{
+  "id": "cbr_ru000a0jurm2",
+  "title": "ЦБ: ОткрХОЛБО3",
+  "source": "cbr",
+  "tags": [
+    "cbr",
+    "fixed"
+  ],
+  "input_markdown": "БАНК РОССИИ\nСведения из реестра эмиссионных ценных бумаг\n\nПолное наименование эмитента: АКЦИОНЕРНОЕ ОБЩЕСТВО \"ОТКРЫТИЕ ХОЛДИНГ\"\nИНН эмитента: 7708730590\nГосударственный регистрационный номер выпуска: 4B02-03-14406-A\nISIN: RU000A0JURM2\nВалюта номинала ценной бумаги: российский рубль (RUB)\nНоминальная стоимость одной ценной бумаги: 1 000,00 руб.\nКоличество ценных бумаг в выпуске: 42000000 шт.\nДата начала размещения: 30.07.2014\nДата погашения: 14.07.2027\n\nКупонный доход является фиксированным.\nСтавка купона: 12,50 процента годовых.\n\n| № купонного периода | Дата начала | Дата окончания (выплаты) | Ставка, % годовых | Размер выплаты, руб. |\n| --- | --- | --- | --- | --- |\n| 1 | 30.07.2014 | 28.01.2015 | 12.5 | 62.33 |\n| 2 | 28.01.2015 | 29.07.2015 | 12.5 | 62.33 |\n| 3 | 29.07.2015 | 27.01.2016 | 12.5 | 62.33 |\n| 4 | 27.01.2016 | 27.07.2016 | 12.5 | 62.33 |\n| 5 | 27.07.2016 | 25.01.2017 | 12.0 | 59.84 |\n| 6 | 25.01.2017 | 26.07.2017 | 12.0 | 59.84 |\n| 7 | 26.07.2017 | 22.07.2020 | 12.42 | 366.99 |\n| 8 | 22.07.2020 | 20.01.2021 | 0.01 | 0.05 |\n| 9 | 20.01.2021 | 21.07.2021 | 0.01 | 0.05 |\n| 10 | 21.07.2021 | 19.01.2022 | 0.01 | 0.05 |\n| 11 | 19.01.2022 | 20.07.2022 | 0.01 | 0.05 |\n| 12 | 20.07.2022 | 18.01.2023 | 0.01 | 0.05 |",
+  "expected": {
+    "isin": "RU000A0JURM2",
+    "reg_number": "4B02-03-14406-A",
+    "issuer_name": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ОТКРЫТИЕ ХОЛДИНГ\"",
+    "issuer_inn": "7708730590",
+    "nominal_value": 1000.0,
+    "currency": "RUB",
+    "issue_volume": 42000000,
+    "placement_start_date": "2014-07-30",
+    "maturity_date": "2027-07-14",
+    "coupon_type": "FIXED",
+    "floater_formula": null,
+    "coupons": [
+      {
+        "coupon_number": 1,
+        "start_date": "2014-07-30",
+        "end_date": "2015-01-28",
+        "rate_percent": 12.5,
+        "payment_amount": 62.33
+      },
+      {
+        "coupon_number": 2,
+        "start_date": "2015-01-28",
+        "end_date": "2015-07-29",
+        "rate_percent": 12.5,
+        "payment_amount": 62.33
+      },
+      {
+        "coupon_number": 3,
+        "start_date": "2015-07-29",
+        "end_date": "2016-01-27",
+        "rate_percent": 12.5,
+        "payment_amount": 62.33
+      },
+      {
+        "coupon_number": 4,
+        "start_date": "2016-01-27",
+        "end_date": "2016-07-27",
+        "rate_percent": 12.5,
+        "payment_amount": 62.33
+      },
+      {
+        "coupon_number": 5,
+        "start_date": "2016-07-27",
+        "end_date": "2017-01-25",
+        "rate_percent": 12.0,
+        "payment_amount": 59.84
+      },
+      {
+        "coupon_number": 6,
+        "start_date": "2017-01-25",
+        "end_date": "2017-07-26",
+        "rate_percent": 12.0,
+        "payment_amount": 59.84
+      },
+      {
+        "coupon_number": 7,
+        "start_date": "2017-07-26",
+        "end_date": "2020-07-22",
+        "rate_percent": 12.42,
+        "payment_amount": 366.99
+      },
+      {
+        "coupon_number": 8,
+        "start_date": "2020-07-22",
+        "end_date": "2021-01-20",
+        "rate_percent": 0.01,
+        "payment_amount": 0.05
+      },
+      {
+        "coupon_number": 9,
+        "start_date": "2021-01-20",
+        "end_date": "2021-07-21",
+        "rate_percent": 0.01,
+        "payment_amount": 0.05
+      },
+      {
+        "coupon_number": 10,
+        "start_date": "2021-07-21",
+        "end_date": "2022-01-19",
+        "rate_percent": 0.01,
+        "payment_amount": 0.05
+      },
+      {
+        "coupon_number": 11,
+        "start_date": "2022-01-19",
+        "end_date": "2022-07-20",
+        "rate_percent": 0.01,
+        "payment_amount": 0.05
+      },
+      {
+        "coupon_number": 12,
+        "start_date": "2022-07-20",
+        "end_date": "2023-01-18",
+        "rate_percent": 0.01,
+        "payment_amount": 0.05
+      }
+    ],
+    "amortization": [],
+    "quotes": {
+      "reg_number": "Государственный регистрационный номер выпуска: 4B02-03-14406-A",
+      "issuer_inn": "ИНН: 7708730590",
+      "nominal_value": "Номинальная стоимость: 1000.0"
+    }
+  },
+  "critical_fields": [
+    "reg_number",
+    "isin",
+    "issuer_inn",
+    "nominal_value",
+    "currency",
+    "maturity_date",
+    "coupon_type",
+    "coupons_count"
+  ]
+}

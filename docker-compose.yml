@@ -1,0 +1,83 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: bond_parser
+      POSTGRES_USER: bond
+      POSTGRES_PASSWORD: bond
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bond -d bond_parser"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  ollama:
+    image: ollama/ollama:latest
+    environment:
+      # Явно расширяем контекст: иначе Ollama режет до 2–4k токенов
+      OLLAMA_CONTEXT_LENGTH: "32768"
+      OLLAMA_KEEP_ALIVE: "24h"
+    volumes:
+      - ollama_data:/root/.ollama
+    ports:
+      - "11434:11434"
+    healthcheck:
+      test: ["CMD-SHELL", "ollama list >/dev/null 2>&1 || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 30
+      start_period: 20s
+
+  ollama-init:
+    image: curlimages/curl:8.5.0
+    depends_on:
+      ollama:
+        condition: service_started
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        set -e
+        echo "Waiting for Ollama API..."
+        until curl -sf http://ollama:11434/api/tags >/dev/null; do sleep 2; done
+        echo "Pulling qwen2.5:32b (first run may take a while)..."
+        curl -sf http://ollama:11434/api/pull -d '{"name":"qwen2.5:32b"}'
+        echo
+        echo "Model ready."
+    restart: "no"
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      db:
+        condition: service_healthy
+      ollama:
+        condition: service_started
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://bond:bond@db:5432/bond_parser
+      LLM_PROVIDER: ollama
+      LLM_BASE_URL: http://ollama:11434/v1
+      LLM_MODEL_NAME: qwen2.5:32b
+      LLM_API_KEY: not-needed
+      LLM_TEMPERATURE: "0.05"
+      LLM_MAX_TOKENS: "8192"
+      LLM_CONTEXT_WINDOW: "32768"
+      LLM_INSTRUCTOR_MODE: MD_JSON
+      LLM_USE_MOCK: "false"
+      SCHEDULER_ENABLED: "true"
+    volumes:
+      - ./storage:/app/storage
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  ollama_data:

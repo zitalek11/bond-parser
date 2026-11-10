@@ -1,0 +1,324 @@
+{% extends "base.html" %}
+{% block title %}Проверка #{{ task.id }} — {{ app_name }}{% endblock %}
+{% block content %}
+{% set err = errors_by_field %}
+{% set floater = data.get('floater_formula') if data.get('floater_formula') is mapping else none %}
+<div class="mb-4 flex flex-wrap items-center justify-between gap-3">
+  <div>
+    <a href="/queue" class="text-sm text-accent underline">← к очереди</a>
+    <h1 class="mt-1 text-xl font-semibold tracking-tight">Верификация #{{ task.id }}</h1>
+    <p class="text-sm text-slate-600">{{ task.title or task.original_filename }}</p>
+  </div>
+  <div class="text-xs text-slate-500">
+    статус <span class="rounded bg-amber-50 px-2 py-0.5 font-medium text-warn">{{ task.status | status_ru }}</span>
+    · {{ task.extractor_backend or "—" }} · {{ task.llm_model or "—" }}
+  </div>
+</div>
+
+{% if form_error %}
+<div class="mb-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-danger">{{ form_error }}</div>
+{% endif %}
+
+{% if validation_errors %}
+<details class="mb-4 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3" open>
+  <summary class="cursor-pointer text-sm font-medium text-warn">
+    Замечания проверки качества ({{ validation_errors|length }})
+  </summary>
+  <ul class="mt-2 space-y-1 text-sm">
+    {% for issue in validation_errors %}
+    <li class="{% if issue.severity == 'warning' %}text-warn{% else %}text-danger{% endif %}">
+      <span class="font-mono text-xs">[{{ issue.code }}]</span>
+      <span class="text-[10px] uppercase text-slate-500">{{ issue.severity | severity_ru }}</span>
+      <span class="font-medium">{{ issue.field }}</span> — {{ issue.message }}
+    </li>
+    {% endfor %}
+  </ul>
+</details>
+{% endif %}
+
+<div class="grid gap-4 lg:grid-cols-2 lg:items-start">
+  <section class="rounded-xl border border-line bg-white">
+    <div class="flex border-b border-line text-sm" id="source-tabs">
+      <button type="button" data-tab="pdf" class="tab-btn border-b-2 border-accent px-4 py-2.5 font-medium text-ink">PDF</button>
+      <button type="button" data-tab="text" class="tab-btn border-b-2 border-transparent px-4 py-2.5 text-slate-500 hover:text-ink">Текст</button>
+      <button type="button" data-tab="moex" class="tab-btn border-b-2 border-transparent px-4 py-2.5 text-slate-500 hover:text-ink">MOEX</button>
+    </div>
+    <div class="h-[75vh]">
+      <div id="pane-pdf" class="tab-pane h-full">
+        {% if task.file_path and task.mime_type == 'application/pdf' %}
+        <iframe src="/files/{{ task.id }}" class="h-full w-full rounded-b-xl" title="Просмотр PDF"></iframe>
+        {% elif task.file_path %}
+        <div class="p-4 text-sm text-slate-600">
+          Предпросмотр доступен для PDF.
+          <a class="text-accent underline" href="/files/{{ task.id }}" target="_blank">Скачать исходный файл</a>
+        </div>
+        {% else %}
+        <div class="p-4 text-sm text-slate-500">Файл не приложен.</div>
+        {% endif %}
+      </div>
+      <div id="pane-text" class="tab-pane hidden h-full overflow-auto p-4">
+        <pre class="whitespace-pre-wrap font-mono text-xs leading-relaxed text-slate-800">{{ task.extracted_text or "Текст ещё не извлечён" }}</pre>
+      </div>
+      <div id="pane-moex" class="tab-pane hidden h-full overflow-auto p-4">
+        <pre class="whitespace-pre-wrap font-mono text-xs leading-relaxed text-slate-800">{{ task.moex_reference | tojson(indent=2) if task.moex_reference else "Нет данных MOEX" }}</pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="rounded-xl border border-line bg-white p-4">
+    <form method="post" action="/review/{{ task.id }}/approve" class="space-y-4" id="review-form">
+      <div class="grid gap-3 sm:grid-cols-2">
+        <label class="block text-sm">
+          <span class="mb-1 block font-medium">Рег. номер {% if 'reg_number' in err %}<span class="text-danger">*</span>{% endif %}</span>
+          <input name="reg_number" value="{{ data.get('reg_number','') }}" required
+                 class="w-full rounded-md border border-line px-3 py-2 {% if 'reg_number' in err %}field-error{% endif %}" />
+          {% for m in err.get('reg_number', []) %}<p class="mt-1 text-xs text-danger">{{ m }}</p>{% endfor %}
+        </label>
+        <label class="block text-sm">
+          <span class="mb-1 block font-medium">ISIN</span>
+          <input name="isin" value="{{ data.get('isin') or '' }}" class="w-full rounded-md border border-line px-3 py-2 font-mono" />
+        </label>
+        <label class="block text-sm sm:col-span-2">
+          <span class="mb-1 block font-medium">Эмитент</span>
+          <input name="issuer_name" value="{{ data.get('issuer_name','') }}" required class="w-full rounded-md border border-line px-3 py-2" />
+        </label>
+        <label class="block text-sm">
+          <span class="mb-1 block font-medium">ИНН {% if 'issuer_inn' in err %}<span class="text-danger">*</span>{% endif %}</span>
+          <input name="issuer_inn" value="{{ data.get('issuer_inn','') }}" required
+                 class="w-full rounded-md border border-line px-3 py-2 font-mono {% if 'issuer_inn' in err %}field-error{% endif %}" />
+          {% for m in err.get('issuer_inn', []) %}<p class="mt-1 text-xs text-danger">{{ m }}</p>{% endfor %}
+        </label>
+        <label class="block text-sm">
+          <span class="mb-1 block font-medium">Валюта</span>
+          <input name="currency" value="{{ data.get('currency','RUB') }}" maxlength="3"
+                 class="w-full rounded-md border border-line px-3 py-2 uppercase" />
+        </label>
+        <label class="block text-sm">
+          <span class="mb-1 block font-medium">Номинал {% if 'nominal_value' in err %}<span class="text-danger">*</span>{% endif %}</span>
+          <input name="nominal_value" type="number" step="any" value="{{ data.get('nominal_value','') }}" required
+                 class="w-full rounded-md border border-line px-3 py-2 {% if 'nominal_value' in err %}field-error{% endif %}" />
+          {% for m in err.get('nominal_value', []) %}<p class="mt-1 text-xs text-danger">{{ m }}</p>{% endfor %}
+        </label>
+        <label class="block text-sm">
+          <span class="mb-1 block font-medium">Объём выпуска (шт.)</span>
+          <input name="issue_volume" type="number" value="{{ data.get('issue_volume') or '' }}" class="w-full rounded-md border border-line px-3 py-2" />
+        </label>
+        <label class="block text-sm">
+          <span class="mb-1 block font-medium">Дата размещения</span>
+          <input name="placement_start_date" type="date" value="{{ data.get('placement_start_date') or '' }}" class="w-full rounded-md border border-line px-3 py-2" />
+        </label>
+        <label class="block text-sm">
+          <span class="mb-1 block font-medium">Дата погашения {% if 'maturity_date' in err %}<span class="text-danger">*</span>{% endif %}</span>
+          <input name="maturity_date" type="date" value="{{ data.get('maturity_date') or '' }}"
+                 class="w-full rounded-md border border-line px-3 py-2 {% if 'maturity_date' in err %}field-error{% endif %}" />
+          {% for m in err.get('maturity_date', []) %}<p class="mt-1 text-xs text-danger">{{ m }}</p>{% endfor %}
+        </label>
+        <label class="block text-sm">
+          <span class="mb-1 block font-medium">Тип купона {% if 'coupon_type' in err %}<span class="text-danger">*</span>{% endif %}</span>
+          <select name="coupon_type" id="coupon_type"
+                  class="w-full rounded-md border border-line px-3 py-2 {% if 'coupon_type' in err %}field-error{% endif %}">
+            {% for ct in ['FIXED','FLOATER','ZERO','OTHER'] %}
+            <option value="{{ ct }}" {% if data.get('coupon_type') == ct %}selected{% endif %}>{{ ct | coupon_type_ru }}</option>
+            {% endfor %}
+          </select>
+          {% for m in err.get('coupon_type', []) %}<p class="mt-1 text-xs text-danger">{{ m }}</p>{% endfor %}
+        </label>
+      </div>
+
+      {# -------- Floater formula -------- #}
+      <div id="floater-block" class="rounded-lg border border-teal-100 bg-teal-50/40 p-3 {% if data.get('coupon_type') != 'FLOATER' %}hidden{% endif %}">
+        <div class="mb-2 flex items-center justify-between">
+          <h3 class="text-sm font-semibold text-accent">Формула флоатера</h3>
+          {% if 'floater_formula' in err or 'floater_formula.benchmark' in err or 'floater_formula.spread_percent' in err %}
+          <span class="text-xs text-danger">требует правки</span>
+          {% endif %}
+        </div>
+        <div class="grid gap-3 sm:grid-cols-2">
+          <label class="block text-sm">
+            <span class="mb-1 block font-medium">Индикатор</span>
+            <select name="floater_benchmark" class="w-full rounded-md border border-line px-3 py-2 {% if 'floater_formula.benchmark' in err %}field-error{% endif %}">
+              <option value="KEY_RATE_CBR" {% if floater and floater.get('benchmark') == 'KEY_RATE_CBR' %}selected{% endif %}>КС ЦБ (KEY_RATE_CBR)</option>
+              <option value="RUONIA" {% if floater and floater.get('benchmark') == 'RUONIA' %}selected{% endif %}>RUONIA</option>
+              <option value="RUSFAR" {% if floater and floater.get('benchmark') == 'RUSFAR' %}selected{% endif %}>RUSFAR</option>
+              <option value="CPI" {% if floater and floater.get('benchmark') == 'CPI' %}selected{% endif %}>ИПЦ (CPI)</option>
+              <option value="OTHER" {% if floater and floater.get('benchmark') == 'OTHER' %}selected{% endif %}>Прочий</option>
+            </select>
+          </label>
+          <label class="block text-sm">
+            <span class="mb-1 block font-medium">Тип усреднения</span>
+            <select name="floater_averaging_type" class="w-full rounded-md border border-line px-3 py-2">
+              {% for at, label in [('POINT_IN_TIME','На дату (POINT_IN_TIME)'),('AVERAGE_IN_ARREARS','Среднее за период'),('COMPOUNDED','Сложный %'),('UNKNOWN','Неизвестно')] %}
+              <option value="{{ at }}" {% if floater and floater.get('averaging_type') == at %}selected{% endif %}>{{ label }}</option>
+              {% endfor %}
+            </select>
+          </label>
+          <label class="block text-sm">
+            <span class="mb-1 block font-medium">Спред, % годовых</span>
+            <input name="floater_spread_percent" type="number" step="any"
+                   value="{{ floater.get('spread_percent') if floater and floater.get('spread_percent') is not none else '0' }}"
+                   class="w-full rounded-md border border-line px-3 py-2 {% if 'floater_formula.spread_percent' in err %}field-error{% endif %}" />
+          </label>
+          <label class="block text-sm">
+            <span class="mb-1 block font-medium">Лаг наблюдения, дней</span>
+            <input name="floater_observation_shift_days" type="number"
+                   value="{{ floater.get('observation_shift_days') if floater and floater.get('observation_shift_days') is not none else '' }}"
+                   class="w-full rounded-md border border-line px-3 py-2" />
+          </label>
+          <label class="block text-sm">
+            <span class="mb-1 block font-medium">Потолок ставки (cap)</span>
+            <input name="floater_cap_rate" type="number" step="any"
+                   value="{{ floater.get('cap_rate') if floater and floater.get('cap_rate') is not none else '' }}"
+                   class="w-full rounded-md border border-line px-3 py-2" />
+          </label>
+          <label class="block text-sm">
+            <span class="mb-1 block font-medium">Пол ставки (floor)</span>
+            <input name="floater_floor_rate" type="number" step="any"
+                   value="{{ floater.get('floor_rate') if floater and floater.get('floor_rate') is not none else '' }}"
+                   class="w-full rounded-md border border-line px-3 py-2" />
+          </label>
+          <label class="block text-sm sm:col-span-2">
+            <span class="mb-1 block font-medium">Цитата формулы из документа</span>
+            <textarea name="floater_raw_formula_text" rows="2"
+                      class="w-full rounded-md border border-line px-3 py-2 text-sm">{{ floater.get('raw_formula_text') if floater else '' }}</textarea>
+          </label>
+        </div>
+      </div>
+
+      <label class="block text-sm">
+        <span class="mb-1 block font-medium">Купоны (JSON) {% if 'coupons' in err %}<span class="text-danger">*</span>{% endif %}</span>
+        <textarea name="coupons_json" rows="5"
+                  class="w-full rounded-md border border-line px-3 py-2 font-mono text-xs {% if 'coupons' in err %}field-error{% endif %}">{{ coupons_json }}</textarea>
+        {% for m in err.get('coupons', []) %}<p class="mt-1 text-xs text-danger">{{ m }}</p>{% endfor %}
+      </label>
+
+      {# -------- Amortization interactive table -------- #}
+      <div class="{% if 'amortization' in err %}rounded-lg border border-red-200 p-3{% endif %}">
+        <div class="mb-2 flex items-center justify-between">
+          <h3 class="text-sm font-semibold">Амортизация номинала {% if 'amortization' in err %}<span class="text-danger">*</span>{% endif %}</h3>
+          <button type="button" id="amort-add" class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium hover:bg-slate-200">+ добавить строку</button>
+        </div>
+        {% for m in err.get('amortization', []) %}<p class="mb-2 text-xs text-danger">{{ m }}</p>{% endfor %}
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-left text-xs" id="amort-table">
+            <thead class="bg-panel text-slate-500">
+              <tr>
+                <th class="px-2 py-1.5 font-medium">Дата</th>
+                <th class="px-2 py-1.5 font-medium">№ купона</th>
+                <th class="px-2 py-1.5 font-medium">Погашение %</th>
+                <th class="px-2 py-1.5 font-medium">Остаток %</th>
+                <th class="px-2 py-1.5"></th>
+              </tr>
+            </thead>
+            <tbody id="amort-body"></tbody>
+          </table>
+        </div>
+        <textarea name="amortization_json" id="amortization_json" class="hidden">{{ amortization_json }}</textarea>
+      </div>
+
+      <label class="block text-sm">
+        <span class="mb-1 block font-medium">Цитаты (JSON)</span>
+        <textarea name="quotes_json" rows="3" class="w-full rounded-md border border-line px-3 py-2 font-mono text-xs">{{ quotes_json }}</textarea>
+      </label>
+
+      <div class="grid gap-3 sm:grid-cols-2">
+        <label class="block text-sm">
+          <span class="mb-1 block font-medium">Оператор</span>
+          <input name="reviewer" value="operator" class="w-full rounded-md border border-line px-3 py-2" />
+        </label>
+        <label class="block text-sm">
+          <span class="mb-1 block font-medium">Комментарий</span>
+          <input name="comment" class="w-full rounded-md border border-line px-3 py-2" />
+        </label>
+      </div>
+
+      <div class="flex flex-wrap gap-2 border-t border-line pt-4">
+        <button type="submit" class="rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-white hover:bg-teal-800">
+          Подтвердить и сохранить в БД
+        </button>
+        <button type="submit" formaction="/review/{{ task.id }}/reject" formmethod="post"
+                class="rounded-md border border-danger px-4 py-2.5 text-sm font-medium text-danger hover:bg-red-50"
+                onclick="return confirm('Отклонить документ #{{ task.id }}?')">
+          Отклонить
+        </button>
+      </div>
+    </form>
+  </section>
+</div>
+
+<script>
+  document.querySelectorAll(".tab-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const tab = btn.dataset.tab;
+      document.querySelectorAll(".tab-btn").forEach((b) => {
+        b.classList.remove("border-accent", "font-medium", "text-ink");
+        b.classList.add("border-transparent", "text-slate-500");
+      });
+      btn.classList.add("border-accent", "font-medium", "text-ink");
+      btn.classList.remove("border-transparent", "text-slate-500");
+      document.querySelectorAll(".tab-pane").forEach((p) => p.classList.add("hidden"));
+      document.getElementById("pane-" + tab).classList.remove("hidden");
+    });
+  });
+
+  const couponType = document.getElementById("coupon_type");
+  const floaterBlock = document.getElementById("floater-block");
+  function syncFloater() {
+    floaterBlock.classList.toggle("hidden", couponType.value !== "FLOATER");
+  }
+  couponType.addEventListener("change", syncFloater);
+  syncFloater();
+
+  const amortBody = document.getElementById("amort-body");
+  const amortJson = document.getElementById("amortization_json");
+
+  function rowTemplate(item = {}) {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td class="px-1 py-1"><input type="date" class="amort-date w-full rounded border border-line px-1.5 py-1" value="${item.payment_date || ""}" /></td>
+      <td class="px-1 py-1"><input type="number" min="1" class="amort-coupon w-20 rounded border border-line px-1.5 py-1" value="${item.coupon_number ?? ""}" /></td>
+      <td class="px-1 py-1"><input type="number" step="any" class="amort-pct w-24 rounded border border-line px-1.5 py-1" value="${item.amortization_percent ?? item.percent ?? ""}" required /></td>
+      <td class="px-1 py-1"><input type="number" step="any" class="amort-resid w-24 rounded border border-line px-1.5 py-1" value="${item.residual_nominal_percent ?? ""}" /></td>
+      <td class="px-1 py-1 text-right"><button type="button" class="amort-del text-danger hover:underline">✕</button></td>
+    `;
+    tr.querySelector(".amort-del").addEventListener("click", () => {
+      tr.remove();
+      syncAmortJson();
+    });
+    tr.querySelectorAll("input").forEach((inp) => inp.addEventListener("input", syncAmortJson));
+    return tr;
+  }
+
+  function syncAmortJson() {
+    const rows = [...amortBody.querySelectorAll("tr")].map((tr) => {
+      const date = tr.querySelector(".amort-date").value || null;
+      const coupon = tr.querySelector(".amort-coupon").value;
+      const pct = tr.querySelector(".amort-pct").value;
+      const resid = tr.querySelector(".amort-resid").value;
+      return {
+        payment_date: date,
+        coupon_number: coupon ? Number(coupon) : null,
+        amortization_percent: pct ? Number(pct) : null,
+        residual_nominal_percent: resid === "" ? null : Number(resid),
+      };
+    }).filter((r) => r.amortization_percent != null);
+    amortJson.value = JSON.stringify(rows, null, 2);
+  }
+
+  document.getElementById("amort-add").addEventListener("click", () => {
+    amortBody.appendChild(rowTemplate({}));
+    syncAmortJson();
+  });
+
+  document.getElementById("review-form").addEventListener("submit", syncAmortJson);
+
+  try {
+    const initial = JSON.parse(amortJson.value || "[]");
+    if (Array.isArray(initial) && initial.length) {
+      initial.forEach((item) => amortBody.appendChild(rowTemplate(item)));
+    }
+  } catch (e) {
+    console.warn("amortization_json parse failed", e);
+  }
+  syncAmortJson();
+</script>
+{% endblock %}

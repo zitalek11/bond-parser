@@ -1,0 +1,125 @@
+{
+  "id": "cbr_ru000a1097a6",
+  "title": "ЦБ: СберИОС641",
+  "source": "cbr",
+  "tags": [
+    "cbr",
+    "fixed"
+  ],
+  "input_markdown": "БАНК РОССИИ\nСведения из реестра эмиссионных ценных бумаг\n\nПолное наименование эмитента: ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"СБЕРБАНК РОССИИ\"\nИНН эмитента: 7707083893\nГосударственный регистрационный номер выпуска: 4B02-667-01481-B-001P\nISIN: RU000A1097A6\nВалюта номинала ценной бумаги: российский рубль (RUB)\nНоминальная стоимость одной ценной бумаги: 1 000,00 руб.\nКоличество ценных бумаг в выпуске: 111507 шт.\nДата начала размещения: 29.08.2024\nДата погашения: 10.09.2029\n\nКупонный доход является фиксированным.\nСтавка купона: 0,01 процента годовых.\n\n| № купонного периода | Дата начала | Дата окончания (выплаты) | Ставка, % годовых | Размер выплаты, руб. |\n| --- | --- | --- | --- | --- |\n| 1 | 29.08.2024 | 21.03.2025 | 0.01 | 0.06 |\n| 2 | 21.03.2025 | 18.04.2025 | 0.01 | 0.01 |\n| 3 | 18.04.2025 | 20.05.2025 | 0.01 | 0.01 |\n| 4 | 20.05.2025 | 18.06.2025 | 0.01 | 0.01 |\n| 5 | 18.06.2025 | 18.07.2025 | 0.01 | 0.01 |\n| 6 | 18.07.2025 | 18.08.2025 | 0.01 | 0.01 |\n| 7 | 18.08.2025 | 18.09.2025 | 0.01 | 0.01 |\n| 8 | 18.09.2025 | 17.10.2025 | 0.01 | 0.01 |\n| 9 | 17.10.2025 | 18.11.2025 | 0.01 | 0.01 |\n| 10 | 18.11.2025 | 19.12.2025 | 0.01 | 0.01 |\n| 11 | 19.12.2025 | 27.01.2026 | 0.01 | 0.01 |\n| 12 | 27.01.2026 | 18.02.2026 | 0.01 | 0.01 |",
+  "expected": {
+    "isin": "RU000A1097A6",
+    "reg_number": "4B02-667-01481-B-001P",
+    "issuer_name": "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"СБЕРБАНК РОССИИ\"",
+    "issuer_inn": "7707083893",
+    "nominal_value": 1000.0,
+    "currency": "RUB",
+    "issue_volume": 111507,
+    "placement_start_date": "2024-08-29",
+    "maturity_date": "2029-09-10",
+    "coupon_type": "FIXED",
+    "floater_formula": null,
+    "coupons": [
+      {
+        "coupon_number": 1,
+        "start_date": "2024-08-29",
+        "end_date": "2025-03-21",
+        "rate_percent": 0.01,
+        "payment_amount": 0.06
+      },
+      {
+        "coupon_number": 2,
+        "start_date": "2025-03-21",
+        "end_date": "2025-04-18",
+        "rate_percent": 0.01,
+        "payment_amount": 0.01
+      },
+      {
+        "coupon_number": 3,
+        "start_date": "2025-04-18",
+        "end_date": "2025-05-20",
+        "rate_percent": 0.01,
+        "payment_amount": 0.01
+      },
+      {
+        "coupon_number": 4,
+        "start_date": "2025-05-20",
+        "end_date": "2025-06-18",
+        "rate_percent": 0.01,
+        "payment_amount": 0.01
+      },
+      {
+        "coupon_number": 5,
+        "start_date": "2025-06-18",
+        "end_date": "2025-07-18",
+        "rate_percent": 0.01,
+        "payment_amount": 0.01
+      },
+      {
+        "coupon_number": 6,
+        "start_date": "2025-07-18",
+        "end_date": "2025-08-18",
+        "rate_percent": 0.01,
+        "payment_amount": 0.01
+      },
+      {
+        "coupon_number": 7,
+        "start_date": "2025-08-18",
+        "end_date": "2025-09-18",
+        "rate_percent": 0.01,
+        "payment_amount": 0.01
+      },
+      {
+        "coupon_number": 8,
+        "start_date": "2025-09-18",
+        "end_date": "2025-10-17",
+        "rate_percent": 0.01,
+        "payment_amount": 0.01
+      },
+      {
+        "coupon_number": 9,
+        "start_date": "2025-10-17",
+        "end_date": "2025-11-18",
+        "rate_percent": 0.01,
+        "payment_amount": 0.01
+      },
+      {
+        "coupon_number": 10,
+        "start_date": "2025-11-18",
+        "end_date": "2025-12-19",
+        "rate_percent": 0.01,
+        "payment_amount": 0.01
+      },
+      {
+        "coupon_number": 11,
+        "start_date": "2025-12-19",
+        "end_date": "2026-01-27",
+        "rate_percent": 0.01,
+        "payment_amount": 0.01
+      },
+      {
+        "coupon_number": 12,
+        "start_date": "2026-01-27",
+        "end_date": "2026-02-18",
+        "rate_percent": 0.01,
+        "payment_amount": 0.01
+      }
+    ],
+    "amortization": [],
+    "quotes": {
+      "reg_number": "Государственный регистрационный номер выпуска: 4B02-667-01481-B-001P",
+      "issuer_inn": "ИНН: 7707083893",
+      "nominal_value": "Номинальная стоимость: 1000.0"
+    }
+  },
+  "critical_fields": [
+    "reg_number",
+    "isin",
+    "issuer_inn",
+    "nominal_value",
+    "currency",
+    "maturity_date",
+    "coupon_type",
+    "coupons_count"
+  ]
+}

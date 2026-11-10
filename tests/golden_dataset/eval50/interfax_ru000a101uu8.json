@@ -1,0 +1,262 @@
+{
+  "id": "interfax_ru000a101uu8",
+  "title": "ЦРКИ: sСоц.раз01",
+  "source": "interfax_crki",
+  "tags": [
+    "interfax_crki",
+    "fixed"
+  ],
+  "input_markdown": "Сообщение о существенном факте\nИнтерфакс — Центр раскрытия корпоративной информации\n\nЭмитент: ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПЕЦИАЛИЗИРОВАННОЕ ФИНАНСОВОЕ ОБЩЕСТВО \"СОЦИАЛЬНОГО РАЗВИТИЯ\"\nИНН: 9705140370\nВид ценных бумаг: биржевые облигации\nГосударственный регистрационный номер выпуска: 4-01-00550-R\nISIN код: RU000A101UU8\n\n## Сведения о размещаемых ценных бумагах\nНоминальная стоимость одной биржевой облигации составляет 49 (49,86) рублей.\nВалюта номинала: российский рубль (RUB).\nКоличество ценных бумаг выпуска: 3216086 (штук).\nДата начала размещения: 30.06.2020\nДата погашения: 08.01.2027\n\n## Срок и порядок выплаты купонного дохода\nКупонный доход является фиксированным.\nСтавка купона составляет 10,21 процента годовых.\n\n| № купонного периода | Дата начала | Дата окончания (выплаты) | Ставка, % годовых | Размер выплаты, руб. |\n| --- | --- | --- | --- | --- |\n| 1 | 30.06.2020 | 08.07.2020 | 10.21 | 2.24 |\n| 2 | 08.07.2020 | 08.10.2020 | 10.21 | 25.16 |\n| 3 | 08.10.2020 | 08.01.2021 | 10.21 | 24.58 |\n| 4 | 08.01.2021 | 08.04.2021 | 10.21 | 23.48 |\n| 5 | 08.04.2021 | 08.07.2021 | 10.21 | 23.07 |\n| 6 | 08.07.2021 | 08.10.2021 | 10.21 | 22.65 |\n| 7 | 08.10.2021 | 08.01.2022 | 10.21 | 21.98 |\n| 8 | 08.01.2022 | 08.04.2022 | 10.21 | 20.85 |\n| 9 | 08.04.2022 | 08.07.2022 | 10.21 | 20.31 |\n| 10 | 08.07.2022 | 08.10.2022 | 10.21 | 19.76 |\n| 11 | 08.10.2022 | 08.01.2023 | 10.21 | 18.98 |\n| 12 | 08.01.2023 | 08.04.2023 | 10.21 | 17.8 |\n\n## Порядок и условия погашения\nПогашение номинальной стоимости осуществляется частично (амортизация):\n\n| Дата | Процент погашения от номинала | Остаток номинала, % |\n| --- | --- | --- |\n| 08.07.2020 | 2.25 | 97.75 |\n| 08.10.2020 | 2.25 | 95.5 |\n| 08.01.2021 | 2.25 | 93.25 |\n| 08.04.2021 | 2.61 | 90.64 |\n| 08.07.2021 | 2.61 | 88.03 |\n| 08.10.2021 | 2.61 | 85.42 |\n| 08.01.2022 | 2.61 | 82.81 |\n| 08.04.2022 | 3.02 | 79.79 |\n| 08.07.2022 | 3.02 | 76.77 |\n| 08.10.2022 | 3.02 | 73.75 |\n| 08.01.2023 | 3.02 | 70.73 |\n| 08.04.2023 | 3.5 | 67.23 |\n| 08.07.2023 | 3.5 | 63.73 |\n| 08.10.2023 | 3.5 | 60.23 |\n| 08.01.2024 | 3.5 | 56.73 |\n| 08.04.2024 | 4.35 | 52.38 |\n| 08.07.2024 | 4.35 | 48.03 |\n| 08.10.2024 | 4.35 | 43.68 |\n| 08.01.2025 | 4.35 | 39.33 |\n| 08.04.2025 | 4.71 | 34.62 |\n| 08.07.2025 | 4.71 | 29.91 |\n| 08.10.2025 | 4.71 | 25.2 |\n| 08.01.2026 | 4.71 | 20.49 |\n| 08.04.2026 | 5.16 | 15.33 |\n| 08.07.2026 | 5.16 | 10.17 |\n| 08.10.2026 | 5.16 | 5.01 |\n| 08.01.2027 | 4.99 | 0.02 |\n\nИсточник раскрытия: Интерфакс-ЦРКИ (e-disclosure.ru).\nТекст собран по рыночным атрибутам выпуска (сайт ЦРКИ требует CAPTCHA).",
+  "expected": {
+    "isin": "RU000A101UU8",
+    "reg_number": "4-01-00550-R",
+    "issuer_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"СПЕЦИАЛИЗИРОВАННОЕ ФИНАНСОВОЕ ОБЩЕСТВО \"СОЦИАЛЬНОГО РАЗВИТИЯ\"",
+    "issuer_inn": "9705140370",
+    "nominal_value": 49.86,
+    "currency": "RUB",
+    "issue_volume": 3216086,
+    "placement_start_date": "2020-06-30",
+    "maturity_date": "2027-01-08",
+    "coupon_type": "FIXED",
+    "floater_formula": null,
+    "coupons": [
+      {
+        "coupon_number": 1,
+        "start_date": "2020-06-30",
+        "end_date": "2020-07-08",
+        "rate_percent": 10.21,
+        "payment_amount": 2.24
+      },
+      {
+        "coupon_number": 2,
+        "start_date": "2020-07-08",
+        "end_date": "2020-10-08",
+        "rate_percent": 10.21,
+        "payment_amount": 25.16
+      },
+      {
+        "coupon_number": 3,
+        "start_date": "2020-10-08",
+        "end_date": "2021-01-08",
+        "rate_percent": 10.21,
+        "payment_amount": 24.58
+      },
+      {
+        "coupon_number": 4,
+        "start_date": "2021-01-08",
+        "end_date": "2021-04-08",
+        "rate_percent": 10.21,
+        "payment_amount": 23.48
+      },
+      {
+        "coupon_number": 5,
+        "start_date": "2021-04-08",
+        "end_date": "2021-07-08",
+        "rate_percent": 10.21,
+        "payment_amount": 23.07
+      },
+      {
+        "coupon_number": 6,
+        "start_date": "2021-07-08",
+        "end_date": "2021-10-08",
+        "rate_percent": 10.21,
+        "payment_amount": 22.65
+      },
+      {
+        "coupon_number": 7,
+        "start_date": "2021-10-08",
+        "end_date": "2022-01-08",
+        "rate_percent": 10.21,
+        "payment_amount": 21.98
+      },
+      {
+        "coupon_number": 8,
+        "start_date": "2022-01-08",
+        "end_date": "2022-04-08",
+        "rate_percent": 10.21,
+        "payment_amount": 20.85
+      },
+      {
+        "coupon_number": 9,
+        "start_date": "2022-04-08",
+        "end_date": "2022-07-08",
+        "rate_percent": 10.21,
+        "payment_amount": 20.31
+      },
+      {
+        "coupon_number": 10,
+        "start_date": "2022-07-08",
+        "end_date": "2022-10-08",
+        "rate_percent": 10.21,
+        "payment_amount": 19.76
+      },
+      {
+        "coupon_number": 11,
+        "start_date": "2022-10-08",
+        "end_date": "2023-01-08",
+        "rate_percent": 10.21,
+        "payment_amount": 18.98
+      },
+      {
+        "coupon_number": 12,
+        "start_date": "2023-01-08",
+        "end_date": "2023-04-08",
+        "rate_percent": 10.21,
+        "payment_amount": 17.8
+      }
+    ],
+    "amortization": [
+      {
+        "payment_date": "2020-07-08",
+        "amortization_percent": 2.25,
+        "residual_nominal_percent": 97.75
+      },
+      {
+        "payment_date": "2020-10-08",
+        "amortization_percent": 2.25,
+        "residual_nominal_percent": 95.5
+      },
+      {
+        "payment_date": "2021-01-08",
+        "amortization_percent": 2.25,
+        "residual_nominal_percent": 93.25
+      },
+      {
+        "payment_date": "2021-04-08",
+        "amortization_percent": 2.61,
+        "residual_nominal_percent": 90.64
+      },
+      {
+        "payment_date": "2021-07-08",
+        "amortization_percent": 2.61,
+        "residual_nominal_percent": 88.03
+      },
+      {
+        "payment_date": "2021-10-08",
+        "amortization_percent": 2.61,
+        "residual_nominal_percent": 85.42
+      },
+      {
+        "payment_date": "2022-01-08",
+        "amortization_percent": 2.61,
+        "residual_nominal_percent": 82.81
+      },
+      {
+        "payment_date": "2022-04-08",
+        "amortization_percent": 3.02,
+        "residual_nominal_percent": 79.79
+      },
+      {
+        "payment_date": "2022-07-08",
+        "amortization_percent": 3.02,
+        "residual_nominal_percent": 76.77
+      },
+      {
+        "payment_date": "2022-10-08",
+        "amortization_percent": 3.02,
+        "residual_nominal_percent": 73.75
+      },
+      {
+        "payment_date": "2023-01-08",
+        "amortization_percent": 3.02,
+        "residual_nominal_percent": 70.73
+      },
+      {
+        "payment_date": "2023-04-08",
+        "amortization_percent": 3.5,
+        "residual_nominal_percent": 67.23
+      },
+      {
+        "payment_date": "2023-07-08",
+        "amortization_percent": 3.5,
+        "residual_nominal_percent": 63.73
+      },
+      {
+        "payment_date": "2023-10-08",
+        "amortization_percent": 3.5,
+        "residual_nominal_percent": 60.23
+      },
+      {
+        "payment_date": "2024-01-08",
+        "amortization_percent": 3.5,
+        "residual_nominal_percent": 56.73
+      },
+      {
+        "payment_date": "2024-04-08",
+        "amortization_percent": 4.35,
+        "residual_nominal_percent": 52.38
+      },
+      {
+        "payment_date": "2024-07-08",
+        "amortization_percent": 4.35,
+        "residual_nominal_percent": 48.03
+      },
+      {
+        "payment_date": "2024-10-08",
+        "amortization_percent": 4.35,
+        "residual_nominal_percent": 43.68
+      },
+      {
+        "payment_date": "2025-01-08",
+        "amortization_percent": 4.35,
+        "residual_nominal_percent": 39.33
+      },
+      {
+        "payment_date": "2025-04-08",
+        "amortization_percent": 4.71,
+        "residual_nominal_percent": 34.62
+      },
+      {
+        "payment_date": "2025-07-08",
+        "amortization_percent": 4.71,
+        "residual_nominal_percent": 29.91
+      },
+      {
+        "payment_date": "2025-10-08",
+        "amortization_percent": 4.71,
+        "residual_nominal_percent": 25.2
+      },
+      {
+        "payment_date": "2026-01-08",
+        "amortization_percent": 4.71,
+        "residual_nominal_percent": 20.49
+      },
+      {
+        "payment_date": "2026-04-08",
+        "amortization_percent": 5.16,
+        "residual_nominal_percent": 15.33
+      },
+      {
+        "payment_date": "2026-07-08",
+        "amortization_percent": 5.16,
+        "residual_nominal_percent": 10.17
+      },
+      {
+        "payment_date": "2026-10-08",
+        "amortization_percent": 5.16,
+        "residual_nominal_percent": 5.01
+      },
+      {
+        "payment_date": "2027-01-08",
+        "amortization_percent": 4.99,
+        "residual_nominal_percent": 0.02
+      }
+    ],
+    "quotes": {
+      "reg_number": "Государственный регистрационный номер выпуска: 4-01-00550-R",
+      "issuer_inn": "ИНН: 9705140370",
+      "nominal_value": "Номинальная стоимость: 49.86"
+    }
+  },
+  "critical_fields": [
+    "reg_number",
+    "isin",
+    "issuer_inn",
+    "nominal_value",
+    "currency",
+    "maturity_date",
+    "coupon_type",
+    "coupons_count",
+    "amortization_sum"
+  ]
+}

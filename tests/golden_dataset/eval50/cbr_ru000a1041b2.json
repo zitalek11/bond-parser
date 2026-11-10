@@ -1,0 +1,125 @@
+{
+  "id": "cbr_ru000a1041b2",
+  "title": "ЦБ: Сегежа2P1R",
+  "source": "cbr",
+  "tags": [
+    "cbr",
+    "fixed"
+  ],
+  "input_markdown": "БАНК РОССИИ\nСведения из реестра эмиссионных ценных бумаг\n\nПолное наименование эмитента: ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО ГРУППА КОМПАНИЙ \"СЕГЕЖА\"\nИНН эмитента: 9703024202\nГосударственный регистрационный номер выпуска: 4B02-01-87154-H-002P\nISIN: RU000A1041B2\nВалюта номинала ценной бумаги: российский рубль (RUB)\nНоминальная стоимость одной ценной бумаги: 1 000,00 руб.\nКоличество ценных бумаг в выпуске: 10000000 шт.\nДата начала размещения: 17.11.2021\nДата погашения: 29.10.2036\n\nКупонный доход является фиксированным.\nСтавка купона: 9,85 процента годовых.\n\n| № купонного периода | Дата начала | Дата окончания (выплаты) | Ставка, % годовых | Размер выплаты, руб. |\n| --- | --- | --- | --- | --- |\n| 1 | 17.11.2021 | 18.05.2022 | 9.85 | 49.12 |\n| 2 | 18.05.2022 | 16.11.2022 | 9.85 | 49.12 |\n| 3 | 16.11.2022 | 17.05.2023 | 9.85 | 49.12 |\n| 4 | 17.05.2023 | 15.11.2023 | 9.85 | 49.12 |\n| 5 | 15.11.2023 | 15.05.2024 | 9.85 | 49.12 |\n| 6 | 15.05.2024 | 13.11.2024 | 9.85 | 49.12 |\n| 7 | 13.11.2024 | 14.05.2025 | 9.85 | 49.12 |\n| 8 | 14.05.2025 | 12.11.2025 | 9.85 | 49.12 |\n| 9 | 12.11.2025 | 13.05.2026 | 9.85 | 49.12 |\n| 10 | 13.05.2026 | 11.11.2026 | 9.85 | 49.12 |\n| 11 | 11.11.2026 | 12.05.2027 | 21.0 | 104.71 |\n| 12 | 12.05.2027 | 10.11.2027 |  |  |",
+  "expected": {
+    "isin": "RU000A1041B2",
+    "reg_number": "4B02-01-87154-H-002P",
+    "issuer_name": "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО ГРУППА КОМПАНИЙ \"СЕГЕЖА\"",
+    "issuer_inn": "9703024202",
+    "nominal_value": 1000.0,
+    "currency": "RUB",
+    "issue_volume": 10000000,
+    "placement_start_date": "2021-11-17",
+    "maturity_date": "2036-10-29",
+    "coupon_type": "FIXED",
+    "floater_formula": null,
+    "coupons": [
+      {
+        "coupon_number": 1,
+        "start_date": "2021-11-17",
+        "end_date": "2022-05-18",
+        "rate_percent": 9.85,
+        "payment_amount": 49.12
+      },
+      {
+        "coupon_number": 2,
+        "start_date": "2022-05-18",
+        "end_date": "2022-11-16",
+        "rate_percent": 9.85,
+        "payment_amount": 49.12
+      },
+      {
+        "coupon_number": 3,
+        "start_date": "2022-11-16",
+        "end_date": "2023-05-17",
+        "rate_percent": 9.85,
+        "payment_amount": 49.12
+      },
+      {
+        "coupon_number": 4,
+        "start_date": "2023-05-17",
+        "end_date": "2023-11-15",
+        "rate_percent": 9.85,
+        "payment_amount": 49.12
+      },
+      {
+        "coupon_number": 5,
+        "start_date": "2023-11-15",
+        "end_date": "2024-05-15",
+        "rate_percent": 9.85,
+        "payment_amount": 49.12
+      },
+      {
+        "coupon_number": 6,
+        "start_date": "2024-05-15",
+        "end_date": "2024-11-13",
+        "rate_percent": 9.85,
+        "payment_amount": 49.12
+      },
+      {
+        "coupon_number": 7,
+        "start_date": "2024-11-13",
+        "end_date": "2025-05-14",
+        "rate_percent": 9.85,
+        "payment_amount": 49.12
+      },
+      {
+        "coupon_number": 8,
+        "start_date": "2025-05-14",
+        "end_date": "2025-11-12",
+        "rate_percent": 9.85,
+        "payment_amount": 49.12
+      },
+      {
+        "coupon_number": 9,
+        "start_date": "2025-11-12",
+        "end_date": "2026-05-13",
+        "rate_percent": 9.85,
+        "payment_amount": 49.12
+      },
+      {
+        "coupon_number": 10,
+        "start_date": "2026-05-13",
+        "end_date": "2026-11-11",
+        "rate_percent": 9.85,
+        "payment_amount": 49.12
+      },
+      {
+        "coupon_number": 11,
+        "start_date": "2026-11-11",
+        "end_date": "2027-05-12",
+        "rate_percent": 21.0,
+        "payment_amount": 104.71
+      },
+      {
+        "coupon_number": 12,
+        "start_date": "2027-05-12",
+        "end_date": "2027-11-10",
+        "rate_percent": null,
+        "payment_amount": null
+      }
+    ],
+    "amortization": [],
+    "quotes": {
+      "reg_number": "Государственный регистрационный номер выпуска: 4B02-01-87154-H-002P",
+      "issuer_inn": "ИНН: 9703024202",
+      "nominal_value": "Номинальная стоимость: 1000.0"
+    }
+  },
+  "critical_fields": [
+    "reg_number",
+    "isin",
+    "issuer_inn",
+    "nominal_value",
+    "currency",
+    "maturity_date",
+    "coupon_type",
+    "coupons_count"
+  ]
+}
