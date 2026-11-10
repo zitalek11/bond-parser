@@ -1,16 +1,29 @@
 # Bond Emission Parser
 
-MVP-сервис автоматического сбора, парсинга и валидации эмиссионной документации по российским облигациям.
+Сервис для автоматического парсинга и извлечения параметров выпуска из эмиссионной документации по облигациям.
 
-Гибридный пайплайн:
+## Назначение и цели
 
-1. **Collector** — RSS e-disclosure + MOEX ISS + ручная загрузка  
-2. **Extractor** — PDF/DOCX → Markdown (Docling или PyMuPDF/pdfplumber)  
-3. **LLM Parser** — Structured Output через OpenAI-compatible API + `instructor`  
-4. **Data Quality Gate** — жёсткие бизнес-правила → `APPROVED` или `NEEDS_REVIEW`  
+Цель сервиса — превратить PDF/DOCX эмиссионных документов в структурированные данные по выпуску (купоны, амортизация, даты, номинал, тип дохода и др.), автоматически проверить качество извлечения и при необходимости отправить кейс на ручную проверку (HITL).
+
+Что делает сервис:
+
+- принимает эмиссионную документацию (загрузка файла или сбор из доступных источников);
+- извлекает текст и таблицы из PDF/DOCX;
+- парсит параметры выпуска через локальный или облачный LLM (Qwen) со Structured Output;
+- прогоняет Data Quality Gate (бизнес-правила и антигаллюцинации);
+- отдаёт оператору HITL-очередь и FastAPI UI для ручной проверки сложных кейсов;
+- экспортирует подтверждённые выпуски в XLSX/CSV.
+
+Целевой ориентир качества — **99.9%** за счёт связки автоматических проверок и обязательного Human-in-the-Loop для флоатеров, неоднозначных формулировок и подозрений на галлюцинации модели.
+
+## Пайплайн
+
+1. **Collector** — сбор документов (RSS/источники + ручная загрузка)
+2. **Extractor** — PDF/DOCX → Markdown (Docling или PyMuPDF/pdfplumber)
+3. **LLM Parser** — Structured Output через OpenAI-compatible API + `instructor`
+4. **Data Quality Gate** — жёсткие бизнес-правила → `APPROVED` или `NEEDS_REVIEW`
 5. **HITL** — split-screen веб-интерфейс оператора (Jinja2 + HTMX + Tailwind)
-
-Целевой SLA качества данных **99.9%** достигается связкой автоматических проверок и обязательного Human-in-the-Loop для сложных кейсов (флоатеры, расхождения с MOEX, подозрение на галлюцинации).
 
 ## Стек
 
@@ -19,13 +32,13 @@ MVP-сервис автоматического сбора, парсинга и 
 | API / UI | FastAPI, Jinja2, HTMX, TailwindCDN |
 | ORM | SQLAlchemy 2 async |
 | БД | SQLite (`aiosqlite`) → PostgreSQL (`asyncpg`) одной строкой `.env` |
-| LLM | **Qwen 2.5 on-prem** (Ollama / vLLM) + instructor `MD_JSON` |
+| LLM | **Qwen 2.5** локально (Ollama / vLLM) или облачно (OpenRouter) + instructor `MD_JSON` |
 | OCR/parse | pymupdf + pdfplumber (+ optional docling), stitch таблиц по страницам |
 | Scheduler | APScheduler |
 
 ## Для разработчика контура (клонирование и запуск)
 
-1. Клонируйте **приватный** репозиторий и перейдите в корень сервиса.
+1. Клонируйте репозиторий и перейдите в корень сервиса.
 2. Скопируйте окружение: `cp .env.example .env` — **реальные ключи только в `.env`**, файл в git не коммитится.
 3. Для облачного Qwen через OpenRouter в `.env` задайте:
    ```env
@@ -39,7 +52,7 @@ MVP-сервис автоматического сбора, парсинга и 
 5. Либо Docker: `docker compose up -d --build` (PostgreSQL + Ollama; GPU — через `docker-compose.gpu.yml`).
 6. UI: http://localhost:8000 — дашборд `/`, очередь HITL `/queue`, API `/docs`. Отдельного логина в MVP нет.
 
-**Важно (e-disclosure):** живой RSS/сайт может отдавать CAPTCHA. Для контура по умолчанию `RSS_USE_MOCK=true`; боевой сбор включайте осознанно (`RSS_USE_MOCK=false`) и учитывайте антибот-ограничения источника.
+**Важно:** живой RSS/сайт источника может отдавать CAPTCHA. Для контура по умолчанию `RSS_USE_MOCK=true`; боевой сбор включайте осознанно (`RSS_USE_MOCK=false`) и учитывайте антибот-ограничения источника.
 
 ## Быстрый старт (локально)
 
@@ -96,7 +109,7 @@ DATABASE_URL=postgresql+asyncpg://bond:bond@localhost:5432/bond_parser
 
 Остальной код менять не нужно.
 
-## LLM: Qwen 2.5 On-Premise (без облаков)
+## LLM: Qwen 2.5 (локально или облачно)
 
 ```env
 LLM_PROVIDER=ollama
@@ -114,6 +127,7 @@ LLM_INSTRUCTOR_MODE=MD_JSON
 |-----------|----------|-------|
 | Ollama | `http://localhost:11434/v1` | `qwen2.5:32b` (или `14b`) |
 | vLLM | `http://localhost:8000/v1` | `Qwen/Qwen2.5-32B-Instruct-AWQ` |
+| OpenRouter | `https://openrouter.ai/api/v1` | `qwen/qwen-2.5-72b-instruct` |
 
 Особенности Qwen 2.5 в коде:
 - instructor mode **`MD_JSON`** (стабильнее TOOLS на вложенных схемах);
@@ -138,7 +152,7 @@ EXTRACTOR_BACKEND=docling   # или auto
 - купоны последовательны без разрывов (допуск 3 дня)
 - сумма амортизации = 100 ± 0.01
 - `FLOATER` / `OTHER` → всегда HITL
-- кросс-проверка номинала и даты погашения с MOEX
+- кросс-проверка ключевых полей с внешним справочником (если доступен)
 - цитаты подтверждают ключевые поля (anti-hallucination)
 
 ## REST API (кратко)
